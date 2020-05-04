@@ -1,0 +1,44 @@
+@import '../../styles/colors.scss';
+.circleMenuMain {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #0b1033;
+    border-radius: 100%;
+}
+
+.circleMenuItem1 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circleMenuItem2 {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.circleMenuItem3 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.circleMenuItemIconbox {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50px);
+    width: 50px;
+    height: 50px;
+    background-color: #0b1033;
+    border-radius: 100%;
+}

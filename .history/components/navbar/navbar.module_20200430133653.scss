@@ -1,0 +1,67 @@
+@import '../../styles/colors.scss';
+.navbar {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: none;
+    z-index: 100;
+    transition: height 0.2s cubic-bezier(.27, .1, .13, 2.25);
+}
+
+.navbarToggle {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0b1033;
+    z-index: 100;
+    transition: height 0.2s cubic-bezier(.27, .1, .13, 2.25);
+}
+
+.navbarContainer {
+    width: 100%;
+    height: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarLinks {
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarLogonLink {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 0 1rem 0 6px;
+    cursor: pointer;
+}
+
+.navbarLogonLink:hover {
+    color: #ffd617;
+}
+
+.navbarSmoothLink {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    cursor: pointer;
+}
+
+.navbarSmoothLink:hover {
+    color: #ffd617;
+}
+
+.navbarLogo {
+    width: 7rem;
+}

@@ -1,0 +1,278 @@
+import React, {useState, useEffect, useRef} from 'react';
+import anime, { easings } from 'animejs'
+import classes from './menuPage.module.scss'
+
+const MenuPage = () => {
+
+    const circleMenuMain = useRef()
+    const circleMenuItem1 = useRef()
+
+    let [degree, setDegre] = useState(0)
+
+    let deg = 0
+    let index = 0
+    useEffect(() => {
+        
+        // let degre = 0
+        setInterval(() => {
+            deg += 45
+            index++
+            console.log(deg);
+            anime({
+                targets: '#circleMenuMain',
+                rotate: `${deg}deg`,
+                easings: 'easeInOutElastic(1, 0.5)',
+            })
+            
+            if(deg === 360) {
+                deg = 0
+                index = 0
+            }
+
+            if(index === 0) {
+                anime({
+                    targets: '#imageee1', 
+                    opacity: 1,
+                    begin: () => {
+                        document.getElementById('imageee1').style.display = 'block'
+                    }
+                })
+                anime({
+                    targets: '#imageee2', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee2').style.display = 'none'
+                    }
+                })
+                anime({
+                    targets: '#imageee3', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee3').style.display = 'none'
+                    }
+                })
+            }
+        
+            if(index === 1) {
+                anime({
+                    targets: '#imageee3', 
+                    opacity: 1,
+                    begin: () => {
+                        document.getElementById('imageee3').style.display = 'block'
+                    }
+                })
+                anime({
+                    targets: '#imageee1', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee1').style.display = 'none'
+                    }
+                })
+                anime({
+                    targets: '#imageee2', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee2').style.display = 'none'
+                    }
+                })
+            }
+            if(index === 2) {
+                anime({
+                    targets: '#imageee2', 
+                    opacity: 1,
+                    begin: () => {
+                        document.getElementById('imageee2').style.display = 'block'
+                    }
+                })
+                anime({
+                    targets: '#imageee1', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee1').style.display = 'none'
+                    }
+                })
+                anime({
+                    targets: '#imageee3', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee3').style.display = 'none'
+                    }
+                })
+            }
+            if(index === 3) {
+                anime({
+                    targets: '#imageee3', 
+                    opacity: 1,
+                    begin: () => {
+                        document.getElementById('imageee3').style.display = 'block'
+                    }
+                })
+                anime({
+                    targets: '#imageee1', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee1').style.display = 'none'
+                    }
+                })
+                anime({
+                    targets: '#imageee2', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee2').style.display = 'none'
+                    }
+                })
+            }
+            if(index === 4) {
+                anime({
+                    targets: '#imageee3', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee3').style.display = 'none'
+                    }
+                })
+                anime({
+                    targets: '#imageee1', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee1').style.display = 'none'
+                    }
+                })
+                anime({
+                    targets: '#imageee2', 
+                    opacity: 0,
+                    begin: () => {
+                        document.getElementById('imageee2').style.display = 'none'
+                    }
+                })
+            }
+        })
+
+        }, 3000);
+
+        
+
+   
+
+    console.log(deg);
+
+    const handleTurn = () => {
+        deg = -45
+        index = 0
+        anime({
+            targets: '#circleMenuMain',
+            rotate: 0,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn2 = () => {
+        deg = -90
+        index = 1
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -45,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn3 = () => {
+        deg = -135
+        index = 2
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -90,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn4 = () => {
+        deg = -180
+        index = 3
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -135,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn5 = () => {
+        deg = -225
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -180,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn6 = () => {
+        deg = -270
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -225,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn7 = () => {
+        deg = -315
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -270,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+    const handleTurn8 = () => {
+        deg = -360
+        anime({
+            targets: '#circleMenuMain',
+            rotate: -315,
+            easing: 'easeInOutElastic(1, 0.5)',
+        })
+    }
+
+    return(
+        <div className={classes.circleMenuMainBox}>
+             <img id="imageee1" src="/Einweganzug-Karneval.png" alt="" className={classes.circleMenuMainImage1} />
+             <img id="imageee2" src="/about-man.png" alt="" className={classes.circleMenuMainImage2} />
+             <img id="imageee3" src="/Background.png" alt="" className={classes.circleMenuMainImage3} />
+            <div id="circleMenuMain" className={classes.circleMenuMain} ref={circleMenuMain}>
+                <div id="circleMenuItem1" className={classes.circleMenuItem1} >
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn}>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem2" className={classes.circleMenuItem2} >
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn2}>
+                    <span>2</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem3" className={classes.circleMenuItem3}>
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn3}>
+                    <span>3</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem4" className={classes.circleMenuItem4}>
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn4}>
+                    <span>4</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem5" className={classes.circleMenuItem5}>
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn5}>
+                    <span>5</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem6" className={classes.circleMenuItem6}>
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn6}>
+                    <span>6</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem7" className={classes.circleMenuItem7}>
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn7}>
+                    <span>7</span>
+                    </div>
+                </div>
+                <div id="circleMenuItem8" className={classes.circleMenuItem8}>
+                    <div className={classes.circleMenuItemIconbox} onClick={handleTurn8}>
+                    <span>8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default MenuPage

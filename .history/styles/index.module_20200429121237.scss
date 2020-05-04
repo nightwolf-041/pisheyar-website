@@ -1,0 +1,66 @@
+.homeHeader {
+    width: 100%;
+    height: 40rem;
+    background-color: #ccc;
+}
+
+.homeHeaderImagesbox {
+    width: auto;
+    height: 550px;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    overflow: hidden;
+}
+
+.headerImage1 {
+    display: block;
+}
+
+.headerImage2 {
+    display: none;
+}
+
+.homeHeaderTitlebox {
+    width: 27rem;
+    height: 80px;
+    position: absolute;
+    top: 14rem;
+    right: 45%;
+    // overflow-y: hidden;
+}
+
+.homeHeaderTitlebox h1 {
+    font-size: 2.5rem;
+    color: #828282;
+    text-align: right;
+}
+
+.homeHeaderButtonbox {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    top: 25rem;
+    right: 40%;
+    overflow: hidden;
+}
+
+.homeHeaderButtonboxKeeper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeHeaderButtonboxBtn {
+    width: 5rem;
+    padding: 5px;
+    margin-right: 2rem;
+}
+
+.homeHeaderButtonboxText {
+    font-size: 1rem;
+    color: rgb(216, 179, 179);
+}

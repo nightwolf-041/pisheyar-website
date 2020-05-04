@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: $brandDark;
+    overflow: hidden;
+}
+
+.footerTop {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}

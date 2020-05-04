@@ -1,0 +1,249 @@
+@import '../../styles/colors.scss';
+.circleMenuMainBox {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    background-color: #f2f2f2;
+}
+
+.circleMenuMainCenterBoxStart {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 90px);
+    transform: rotate(0deg);
+    background-color: #ccc;
+    border-radius: 100%;
+    z-index: 50;
+    opacity: 1;
+    animation: scal 1s linear !important;
+}
+
+.active {
+    background-color: #ffd617 !important;
+}
+
+.circleMenuMainCenterBox {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 65px;
+    left: calc(50% - 90px);
+    transform: rotate(0deg);
+    background-color: #ccc;
+    border-radius: 100%;
+    z-index: 50;
+    opacity: 0;
+    animation: scal 1s linear !important;
+}
+
+.circleMenuMainImage1 {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 90px);
+    transform: rotate(0deg);
+    background-color: #ccc;
+    border-radius: 100%;
+    z-index: 50;
+    opacity: 1;
+    animation: scal 1s linear !important;
+}
+
+// #imageee1,
+// #imageee2,
+// #imageee3,
+// #imageee4 {
+//     animation: scal 1.5s linear !important;
+// }
+.circleMenuMainImageOther {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 65px;
+    left: calc(50% - 90px);
+    transform: rotate(0deg);
+    background-color: #ccc;
+    border-radius: 100%;
+    z-index: 50;
+    opacity: 0;
+    animation: scal 1s linear !important;
+}
+
+// .circleMenuMainImage3 {
+//     width: 150px;
+//     height: 150px;
+//     position: absolute;
+//     top: 75px;
+//     left: calc(50% - 75px);
+//     transform: rotate(0deg);
+//     background-color: #ccc;
+//     border-radius: 100%;
+//     z-index: 50;
+//     opacity: 0;
+//     animation: scal 0.3s ease-in;
+// }
+// .circleMenuMainImage4 {
+//     width: 150px;
+//     height: 150px;
+//     position: absolute;
+//     top: 75px;
+//     left: calc(50% - 75px);
+//     transform: rotate(0deg);
+//     background-color: #ccc;
+//     border-radius: 100%;
+//     z-index: 50;
+//     opacity: 0;
+//     animation: scal 0.2s ease-in;
+// }
+@keyframes scal {
+    0% {
+        transform: scale(1);
+    }
+    5% {
+        transform: scale(1.1);
+    }
+    14% {
+        transform: scale(1.2);
+    }
+    21% {
+        transform: scale(1.2);
+    }
+    29% {
+        transform: scale(1.1);
+    }
+    36% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(0.9);
+    }
+    49% {
+        transform: scale(0.8);
+    }
+    56% {
+        transform: scale(0.7);
+    }
+    63% {
+        transform: scale(0.7);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    77% {
+        transform: scale(0.9);
+    }
+    85% {
+        transform: scale(1);
+    }
+    92% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.circleMenuMain {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #0b1033;
+    border-radius: 100%;
+    transform: rotate(0deg);
+}
+
+.circleMenuItem1 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(0deg);
+}
+
+.circleMenuItem2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(45deg);
+}
+
+.circleMenuItem3 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(90deg);
+}
+
+.circleMenuItem4 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(135deg);
+}
+
+.circleMenuItem5 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(180deg);
+}
+
+.circleMenuItem6 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(225deg);
+}
+
+.circleMenuItem7 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(270deg);
+}
+
+.circleMenuItem8 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    transform: rotate(315deg);
+}
+
+.circleMenuItemIconbox {
+    position: absolute;
+    top: -100px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    background-color: #0b1033;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.circleMenuItemIconbox span {
+    color: #ffffff;
+}

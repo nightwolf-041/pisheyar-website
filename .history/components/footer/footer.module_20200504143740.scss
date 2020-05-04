@@ -1,0 +1,158 @@
+@import '../../styles/colors.scss';
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: $brandDark;
+    overflow: hidden;
+}
+
+.footerTop {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footerLogobox {
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerLogo {
+    width: 5rem;
+}
+
+.footerAddressbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footerAddressboxItem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footerAddressboxItemIcon {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.footerAddressboxItemSpanFa {
+    direction: rtl;
+    font-size: 1rem;
+    text-align: left;
+    color: $subtitleFFFLight;
+}
+
+.footerAddressboxItemSpan {
+    font-size: 1rem;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: $subtitleFFFLight;
+}
+
+.footerAddressboxSocialsbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerAddressboxSocialIcon {
+    width: 1rem;
+}
+
+.footerLinksbox {
+    width: 25%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.footerLinksboxTitle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: right;
+    margin: 0 0 0.5rem 0;
+}
+
+.footerLinksboxDivider {
+    width: 3rem;
+    height: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.footerLinksboxLink {
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: right;
+    margin: 0.2rem 0;
+}
+
+.footerServicesbox {
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footerServicesboxTitle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: right;
+    margin: 0 0 0.5rem 0;
+}
+
+.footerServicesboxDivider {
+    width: 3rem;
+    height: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.footerServicesboxItem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.footerServicesboxItemIcon {
+    width: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.footerServicesboxItemSpan {
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.footerBottom {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $brandYellow;
+    font-size: 0.9rem;
+}

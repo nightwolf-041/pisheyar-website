@@ -1,0 +1,70 @@
+@import '../../styles/colors.scss';
+.appPageSection {
+    width: 100%;
+    height: 45rem;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.appPageLeft {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.appPageLeftImg {
+    width: 24rem;
+}
+
+.appPageRight {
+    direction: rtl;
+    width: 100%;
+    height: auto;
+}
+
+.appPageRightTitle {
+    position: relative;
+    width: 50%;
+    color: $brandDark;
+    font-weight: bolder;
+    text-align: right;
+    font-size: 2rem;
+    margin: 4rem 0 0 0;
+    padding-bottom: 0.6rem;
+}
+
+.appPageRightTitle b {
+    font-size: 2.3rem;
+    font-weight: bolder !important;
+}
+
+.appPageRightTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: $brandYellow;
+    border-radius: 4rem;
+    z-index: 2;
+}
+
+.appPageRightTitle::before {
+    content: "";
+    position: absolute;
+    bottom: 0.1rem;
+    right: 1rem;
+    width: 100%;
+    height: 1px;
+    background-color: $brandDark;
+    border-radius: 2rem;
+}
+
+.appPageRightSubtitle {
+    color: $brandDark;
+    font-size: 1.2rem;
+}

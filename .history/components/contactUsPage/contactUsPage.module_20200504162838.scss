@@ -1,0 +1,309 @@
+@import '../../styles/colors.scss';
+.contactUsSection {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url('../../public/contactus-back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 0;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+.contactUsSectionBackdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brandDarkLight;
+    z-index: 1;
+}
+
+.contactUsRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contactUsCallbox {
+    width: 23rem;
+    height: auto;
+    padding: 2rem;
+    border: 2px solid $brandYellow;
+    margin-top: 6rem;
+    z-index: 5;
+}
+
+.contactUsCallTop {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contactUsCallTopTitle {
+    color: #ffffff;
+    font-size: 1.7rem;
+    text-align: right;
+    margin: 0 0 0.5rem 0;
+}
+
+.contactUsCallTopDivider {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: $brandYellow;
+    border-radius: 4rem;
+}
+
+.contactUsCallTopDesc {
+    direction: rtl;
+    font-size: 0.9rem;
+    text-align: right;
+    color: $subtitleFFFLight;
+}
+
+.contactUsCallBottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.contactUsCallBottomItem {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contactUsCallBottomItemImage {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.contactUsCallBottomItemSpan {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contactUsContactbox {
+    width: 38rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 5;
+}
+
+.contactUsContactboxTitle {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: right;
+    margin: 4rem 0 0.5rem 0;
+}
+
+.contactUsContactboxDivider {
+    width: 5rem;
+    height: 0.3rem;
+    background-color: $brandYellow;
+    border-radius: 4rem;
+}
+
+.contactUsContactboxDesc {
+    direction: rtl;
+    width: 100%;
+    font-size: 1rem;
+    text-align: right;
+    color: $subtitleFFFLight;
+}
+
+// inputs 
+.contactUsInputsbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    z-index: 5;
+}
+
+.contactUsInputDiv {
+    width: 17rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.contactUsInputDiv:nth-child(2),
+.contactUsInputDiv:nth-child(4) {
+    margin-right: 1.5rem;
+}
+
+.contactUsInputLabel {
+    font-size: 0.9rem;
+    text-align: right;
+    color: $brandYellow;
+    margin-bottom: 0.2rem;
+}
+
+.contactUsInputRtl {
+    direction: rtl;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 0.5rem;
+    background-color: $inputs;
+    color: $placeholders;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.contactUsInputLtr {
+    direction: ltr;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 0.5rem;
+    background-color: $inputs;
+    color: $placeholders;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.contactUsSubmitButton {
+    width: 35.5rem;
+    padding: 0.7rem 0;
+    background-color: $brandYellow;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    // font-weight: bold;
+    color: $brandDark;
+    border-radius: 0.4rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    font-family: Yekan !important;
+}
+
+// inputs
+@media screen and (max-width: 1200px) {
+    .contactUsCallbox {
+        width: 20rem;
+    }
+    .contactUsContactbox {
+        width: 33rem;
+    }
+    .contactUsInputDiv {
+        width: 15rem;
+    }
+    .contactUsSubmitButton {
+        width: 31.6rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contactUsCallbox {
+        width: 18rem;
+        padding: 1rem;
+        margin-top: 18rem;
+    }
+    .contactUsContactbox {
+        width: 23rem;
+    }
+    .contactUsInputDiv {
+        width: 18rem;
+    }
+    .contactUsInputDiv:nth-child(2),
+    .contactUsInputDiv:nth-child(4) {
+        margin-right: 0;
+    }
+    .contactUsSubmitButton {
+        width: 79%;
+    }
+    .contactUsContactboxDesc {
+        width: 190%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactUsSection {
+        background-position: 40% 0;
+    }
+    .contactUsRow {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .contactUsCallbox {
+        width: 22rem;
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+    .contactUsContactbox {
+        width: 100%;
+    }
+    .contactUsInputDiv {
+        width: 15rem;
+    }
+    .contactUsInputDiv:nth-child(2),
+    .contactUsInputDiv:nth-child(4) {
+        margin-right: 1rem;
+    }
+    .contactUsSubmitButton {
+        width: 31rem;
+    }
+    .contactUsContactboxDesc {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contactUsSection {
+        background-position: 43% 0;
+    }
+    .contactUsCallbox {
+        width: 20rem;
+        padding: 1.5rem;
+        margin-top: 4rem;
+    }
+    .contactUsInputDiv {
+        width: 100%;
+    }
+    .contactUsInputDiv:nth-child(2),
+    .contactUsInputDiv:nth-child(4) {
+        margin-right: 0;
+    }
+    .contactUsSubmitButton {
+        width: 100%;
+        padding: 0.6rem 0;
+    }
+    .contactUsInputLtr,
+    .contactUsInputRtl {
+        padding: 0.7rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contactUsCallbox {
+        width: 100%;
+        padding: 1.5rem;
+        margin-top: 4rem;
+    }
+}

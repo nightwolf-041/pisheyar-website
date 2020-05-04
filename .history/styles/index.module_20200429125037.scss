@@ -1,0 +1,85 @@
+@import './colors.scss';
+.homeHeader {
+    width: 100%;
+    height: 60rem;
+    background-color: #f2f2f2;
+}
+
+.homeBackgroundEllipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+}
+
+.homeHeaderImagesbox {
+    width: auto;
+    height: 550px;
+    position: absolute;
+    top: 18rem;
+    right: 0;
+    overflow: hidden;
+}
+
+.headerImage1 {
+    display: block;
+}
+
+.headerImage2 {
+    display: none;
+}
+
+.homeHeaderTitlebox {
+    width: 32rem;
+    height: 10rem;
+    position: absolute;
+    top: 25rem;
+    right: 45%;
+    overflow-y: hidden;
+}
+
+.homeHeaderTitlebox h1 {
+    margin-top: 0;
+    font-size: 2.9rem;
+    word-spacing: 0.3rem;
+    line-height: 4.5rem;
+    color: $title;
+    text-align: right;
+}
+
+.homeHeaderButtonbox {
+    width: auto;
+    height: 3.8rem;
+    position: absolute;
+    top: 37rem;
+    right: 45%;
+    overflow: hidden;
+}
+
+.homeHeaderButtonboxKeeper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.homeHeaderButtonboxBtn {
+    width: 9rem;
+    padding: 7px 15px;
+    background: none;
+    border: 2px solid $brandYellow;
+    border-radius: 2rem;
+    color: $brandDark;
+    font-size: 1.5rem;
+}
+
+.homeHeaderButtonboxText {
+    font-size: 1.5rem;
+    color: $subtitle;
+    margin-left: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
