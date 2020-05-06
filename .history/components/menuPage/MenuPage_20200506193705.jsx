@@ -952,7 +952,7 @@ const MenuPage = () => {
     
 
     // console.log(deg);
-    console.log('sdیی')
+    console.log('sd')
 
     const handleTurn = () => {
         deg = -45
@@ -976,65 +976,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox1.current,
@@ -1091,65 +1091,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox2.current,
@@ -1206,65 +1206,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox3.current,
@@ -1321,65 +1321,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox4.current,
@@ -1436,65 +1436,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox5.current,
@@ -1551,65 +1551,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox6.current,
@@ -1666,65 +1666,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox8.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox8').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox8').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox7.current,
@@ -1782,65 +1782,65 @@ const MenuPage = () => {
             // duration: 500,
             delay: -500
             // delay: 500,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'block'
+            }
         })
         anime({
             targets: centerBox1.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox1').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox2.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox2').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox2').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox3.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox3').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox3').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox4.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox4').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox4').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox5.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox5').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox5').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox6.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox6').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox6').style.display = 'none'
+            }
         })
         anime({
             targets: centerBox7.current, 
             opacity: 0,
             zIndex: -5,
-            // begin: () => {
-            //     document.getElementById('centerBox7').style.display = 'none'
-            // }
+            begin: () => {
+                document.getElementById('centerBox7').style.display = 'none'
+            }
         })
         anime({
             targets: circleMenuItemIconbox8.current,

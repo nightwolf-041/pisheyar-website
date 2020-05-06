@@ -952,7 +952,7 @@ const MenuPage = () => {
     
 
     // console.log(deg);
-    console.log('sdیی')
+    console.log('sd')
 
     const handleTurn = () => {
         deg = -45

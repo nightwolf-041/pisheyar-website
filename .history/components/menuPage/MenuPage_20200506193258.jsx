@@ -952,7 +952,7 @@ const MenuPage = () => {
     
 
     // console.log(deg);
-    console.log('sdیی')
+    console.log('sd')
 
     const handleTurn = () => {
         deg = -45
@@ -1207,7 +1207,7 @@ const MenuPage = () => {
             delay: -500
             // delay: 500,
             // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
+            //     document.getElementById('centerBox3').style.display = 'block'
             // }
         })
         anime({
@@ -1322,7 +1322,7 @@ const MenuPage = () => {
             delay: -500
             // delay: 500,
             // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
+            //     document.getElementById('centerBox4').style.display = 'block'
             // }
         })
         anime({
@@ -1437,7 +1437,7 @@ const MenuPage = () => {
             delay: -500
             // delay: 500,
             // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
+            //     document.getElementById('centerBox5').style.display = 'block'
             // }
         })
         anime({
@@ -1552,7 +1552,7 @@ const MenuPage = () => {
             delay: -500
             // delay: 500,
             // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
+            //     document.getElementById('centerBox6').style.display = 'block'
             // }
         })
         anime({
@@ -1667,7 +1667,7 @@ const MenuPage = () => {
             delay: -500
             // delay: 500,
             // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
+            //     document.getElementById('centerBox7').style.display = 'block'
             // }
         })
         anime({
@@ -1783,7 +1783,7 @@ const MenuPage = () => {
             delay: -500
             // delay: 500,
             // begin: () => {
-            //     document.getElementById('centerBox1').style.display = 'block'
+            //     document.getElementById('centerBox8').style.display = 'block'
             // }
         })
         anime({
