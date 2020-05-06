@@ -1,0 +1,267 @@
+@import '../../styles/colors.scss';
+.appPageSection {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.appPageLeft {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 25rem;
+    height: 26rem;
+    overflow: hidden;
+}
+
+.appPageLeftPhoneImg {
+    width: 11rem;
+    position: absolute;
+    top: 2rem;
+    left: 8rem;
+    z-index: 1;
+}
+
+.appPageLeftEllipseImgBack {
+    width: 23.8rem;
+    opacity: 1;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    z-index: 0;
+}
+
+.appPageLeftSlider {
+    width: 9rem;
+    position: absolute;
+    top: 2rem;
+    left: 9rem;
+    z-index: 3;
+}
+
+.appPageLeftSliderItem {
+    width: 100%;
+    height: auto;
+    padding: 0 0.1rem;
+}
+
+.appPageLeftSliderItemTitle {
+    width: 100%;
+    font-size: 0.7rem;
+    color: $brandYellow;
+    text-align: right;
+}
+
+.appPageLeftSliderItemDesc {
+    direction: rtl;
+    width: 100%;
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-align: right;
+}
+
+.appPageLeftSliderItemButton {
+    background-color: none;
+    border: 1px solid $brandYellow;
+    color: $brandYellow;
+    font-size: 0.5rem;
+}
+
+.appPageRight {
+    direction: rtl;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.appPageRightTitle {
+    position: relative;
+    width: 40%;
+    color: $brandDark;
+    font-weight: bolder;
+    text-align: right;
+    font-size: 2rem;
+    margin: 4rem 0 0 0;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+.appPageRightTitle b {
+    font-size: 2.5rem;
+    font-weight: bolder !important;
+}
+
+.appPageRightTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: $brandYellow;
+    border-radius: 4rem;
+    z-index: 2;
+}
+
+.appPageRightTitle::before {
+    content: "";
+    position: absolute;
+    bottom: 0.1rem;
+    right: 1rem;
+    width: 100%;
+    height: 1px;
+    background-color: $brandDarkOltraLight;
+    border-radius: 2rem;
+}
+
+.appPageRightSubtitle {
+    color: $brandDark;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.appPageRightDesc {
+    width: 50%;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: $brandDark;
+    text-align: right;
+    margin-top: 0;
+}
+
+.appPageRightSocialbox {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.appPageRightSocialImage {
+    width: 6rem;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .appPageLeftPhoneImg {
+        width: 25rem;
+    }
+    .appPageLeft {
+        top: 5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .appPageSection {
+        height: auto;
+    }
+    .appPageLeftPhoneImg {
+        width: 18rem;
+    }
+    .appPageRightTitle {
+        font-size: 1.7rem;
+    }
+    .appPageRightTitle b {
+        font-size: 2.2rem;
+        font-weight: bolder !important;
+    }
+    .appPageRightSocialbox {
+        width: 90%;
+        justify-content: center;
+        margin: 3rem auto 3rem auto;
+    }
+    .appPageRightSocialImage {
+        width: 7rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .appPageRightSubtitle {
+        font-size: 1.2rem;
+    }
+    .appPageRightDesc {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .appPageLeft {
+        top: 4rem;
+        left: calc(50% - 8.5rem);
+    }
+    .appPageLeftPhoneImg {
+        width: 17rem;
+    }
+    .appPageRightTitle {
+        width: 70%;
+        font-size: 2rem;
+        margin: 20rem 0 0 0;
+    }
+    .appPageRightTitle b {
+        font-size: 2.3rem;
+        font-weight: bolder !important;
+    }
+    .appPageRightDesc {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+    .appPageRightSocialbox {
+        width: 95%;
+    }
+    .appPageRightSocialImage {
+        width: 6rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .appPageRightSocialbox {
+        width: 95%;
+        flex-wrap: wrap;
+    }
+    .appPageRightSocialImage {
+        width: 7.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .appPageRightTitle {
+        width: 90%;
+        font-size: 1.6rem;
+        margin: 20rem 0 0 0;
+    }
+    .appPageRightTitle b {
+        font-size: 2rem;
+        font-weight: bolder !important;
+    }
+    .appPageRightDesc {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .appPageRightTitle {
+        width: 90%;
+        font-size: 1.5rem;
+        margin: 20rem 0 0 0;
+    }
+    .appPageRightTitle b {
+        font-size: 1.8rem;
+        font-weight: bolder !important;
+    }
+    .appPageRightDesc {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .appPageRightSubtitle {
+        font-size: 1.1rem;
+    }
+}
