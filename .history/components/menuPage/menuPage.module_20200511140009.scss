@@ -36,7 +36,7 @@
     transform: rotate(0deg);
     background-color: #ccc;
     border-radius: 100%;
-    z-index: 20;
+    z-index: 50;
     opacity: 1;
     box-shadow: 0 0 3rem 1.6rem #0b103379;
     animation: scal 1s linear !important;
@@ -55,7 +55,7 @@
     left: calc(50% - 6rem);
     transform: rotate(0deg);
     border-radius: 100%;
-    z-index: 20;
+    z-index: 50;
     opacity: 0;
     box-shadow: 0 0 3rem 1.6rem #0b103379;
     animation: scal 1s linear !important;
@@ -258,99 +258,64 @@
     top: 3rem;
     left: calc(50% - 15rem);
     width: 30rem;
-    height: 5.5rem;
-    // opacity: 0;
+    height: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: none;
-    border-radius: 1rem;
-    // box-shadow: 0 0 12px 8px rgba(11, 16, 51, 0.55);
     margin: 0 auto 0 auto;
-    z-index: 50;
 }
 
 .menuPageSearchInputsbox {
     // width: 80%;
     width: 0;
-    height: 5.5rem;
+    height: 3.2rem;
+    background-color: $brandDark;
     display: flex;
-    flex-direction: column-reverse;
-    // justify-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    box-shadow: 0 0 12px 8px rgba(11, 16, 51, 0.55);
     // overflow: hidden;
     opacity: 0;
-    z-index: 50;
 }
-// menuPageSearchInputBottom
 
-
-.menuPageSearchInputBottom {
-    font-family: Yekan !important;
+.menuPageSearchInputLeft {
     direction: rtl;
-    width: 95%;
-    height: 2rem;
+    width: 10.5rem;
     background: none;
     border: 1px solid $brandYellow;
     outline: none;
     border-radius: 2rem;
     margin-right: 1rem;
     margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
     padding: 0.4rem 0.7rem;
     color: #ffffff;
-    z-index: 50;
 }
 
-.menuPageSearchInputBottom::placeholder {
+.menuPageSearchInputLeft::placeholder {
     color: $subtitleFFFLight;
 }
 
-.menuPageSearchInputBottom:focus::placeholder {
+.menuPageSearchInputLeft:focus::placeholder {
     opacity: 0;
 }
 
-.menuPageSearchInputTopbox{
-    width: 97%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items:center;
-    z-index: 50;
-}
-
-.menuPageSearchInputTopContry {
+.menuPageSearchInputRight {
     height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     // direction: rtl;
-    width: 48%;
+    width: 10rem;
     background: none;
     border: 1px solid $brandYellow;
     outline: none;
     border-radius: 2rem;
     padding: 0.4rem 0.7rem;
     color: #ffffff;
-    z-index: 50;
-}
-.menuPageSearchInputTopCity {
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // direction: rtl;
-    width: 48%;
-    background: none;
-    border: 1px solid $brandYellow;
-    outline: none;
-    border-radius: 2rem;
-    padding: 0.4rem 0.7rem;
-    margin-left: 0.4rem;
-    color: #ffffff;
-    z-index: 50;
 }
 
 .menuPageSearchLogobox {
@@ -364,9 +329,8 @@
 }
 
 .menuPageSearchCharkhIcon {
-    width: 4rem;
+    width: 5rem;
     cursor: pointer;
-    z-index: 4;
 }
 
 .menuPageSearchSerachIcon {
@@ -396,68 +360,45 @@
     background-color: $brandDark;
     display: flex;
     flex-direction: row;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     border-radius: 2rem;
     box-shadow: 0 0 12px 8px rgba(11, 16, 51, 0.55);
-    // overflow: hidden;
-    padding-top: 0.5rem;
+    overflow: hidden;
     opacity: 0;
 }
 
-.menuPageSearchInputBottomMobile {
-    font-family: Yekan;
+.menuPageSearchInputLeftMobile {
     direction: rtl;
-    width: 70%;
+    width: 12.5rem;
     background: none;
     border: 1px solid $brandYellow;
     outline: none;
     border-radius: 2rem;
     margin-right: 0;
     margin-left: 0;
-    // margin-top: 0.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0.4rem 0.7rem;
     color: #ffffff;
 }
 
-.menuPageSearchInputBottomMobile::placeholder {
+.menuPageSearchInputLeftMobile::placeholder {
     color: $subtitleFFFLight;
 }
 
-.menuPageSearchInputBottomMobile:focus::placeholder {
+.menuPageSearchInputLeftMobile:focus::placeholder {
     opacity: 0;
 }
 
-.menuPageSearchInputTopContryMobile {
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // direction: rtl;
-    width: 70%;
+.menuPageSearchInputRightMobile {
+    direction: rtl;
+    width: 12.5rem;
     background: none;
     border: 1px solid $brandYellow;
     outline: none;
     border-radius: 2rem;
     padding: 0.4rem 0.7rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: #ffffff;
-}
-.menuPageSearchInputTopCityMobile {
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // direction: rtl;
-    width: 70%;
-    background: none;
-    border: 1px solid $brandYellow;
-    outline: none;
-    border-radius: 2rem;
-    padding: 0.4rem 0.7rem;
-    margin-bottom: 0.5rem;
     color: #ffffff;
 }
 
@@ -472,8 +413,10 @@
 }
 
 .menuPageSearchCharkhIconMobile {
-    width: 4rem;
-    cursor: pointer;
+    width: 5rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .menuPageSearchSerachIconMobile {

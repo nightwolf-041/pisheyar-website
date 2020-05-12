@@ -13,7 +13,8 @@ import Footer from '../components/footer/Footer'
 import classes from '../styles/index.module.scss'
 
 
-const IndexPage = () => {
+const IndexPage = ({stars}) => {
+console.log(stars);
   return (
     <>
       <Head>
@@ -33,6 +34,17 @@ const IndexPage = () => {
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://api.github.com/repos/zeit/next.js')
+  const json = await res.json()
+
+  return {
+    props: {
+      stars: json.stargazers_count,
+    },
+  }
 }
 
 export default IndexPage
