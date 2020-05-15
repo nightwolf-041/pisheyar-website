@@ -1,0 +1,150 @@
+@import '../../styles/colors.scss';
+.hamburgerMenu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 5rem;
+    height: 100vh;
+    background-color: $brandDark;
+    transition: all 0.2s ease-in;
+    z-index: 100;
+}
+
+.hamburgerMenuToggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    height: 100vh;
+    background-color: $brandDark;
+    transition: all 0.2s ease-in;
+    // overflow: hidden;
+    z-index: 100;
+}
+
+// .hamburgerMenuToggle div {
+//     margin-right: 0 !important;
+//     width: 120%;
+// }
+// .hamburgerMenuLogo {
+//     position: absolute;
+//     top: 0.5rem;
+//     left: calc(50% - 1.7rem);
+//     width: 3.4rem;
+//     opacity: 0;
+// }
+.hamburgerMenuRegisterItemDiv {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburgerMenuRegisterItem {
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuRegisterItem:hover {
+    color: $brandYellow !important;
+}
+
+.hamburgerMenuItemLink1 {
+    position: absolute;
+    top: 9rem;
+    left: calc(50% - 0.9rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink2 {
+    position: absolute;
+    top: 12rem;
+    left: calc(50% - 0.9rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink3 {
+    position: absolute;
+    top: 15rem;
+    left: calc(50% - 1.05rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink4 {
+    position: absolute;
+    top: 18rem;
+    left: calc(50% - 0.9rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink5 {
+    position: absolute;
+    top: 21rem;
+    left: calc(50% - 0.6rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink6 {
+    position: absolute;
+    top: 24rem;
+    left: calc(50% - 0.9rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink7 {
+    position: absolute;
+    top: 27rem;
+    left: calc(50% - 0.9rem);
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink:hover {
+    color: $brandYellow !important;
+}
+
+.hamburgerMenuItemLinkActive {
+    color: $brandYellow !important;
+}
+
+.hamburgerMenuItem {
+    // font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hamburgerMenuPerfect {
+    height: 100vh;
+}
+
+@media screen and (min-width: 992px) {
+    .hamburgerMenu {
+        display: none;
+    }
+    .hamburgerMenuToggle {
+        display: none;
+    }
+}

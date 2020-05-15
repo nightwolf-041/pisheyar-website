@@ -1,0 +1,125 @@
+@import '../../styles/colors.scss';
+.hamburgerMenu {
+    position: fixed;
+    top: 0;
+    right: -8rem;
+    width: 5rem;
+    height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    background-color: $brandDark;
+    z-index: 100;
+}
+
+.hamburgerMenuToggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    background-color: $brandDark;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.hamburgerMenuLogo {
+    width: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.hamburgerMenuItemLink1 {
+    position: absolute;
+    top: 5rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink2 {
+    position: absolute;
+    top: 6rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink3 {
+    position: absolute;
+    top: 7rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink4 {
+    position: absolute;
+    top: 8rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink1 {
+    position: absolute;
+    top: 5rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink1 {
+    position: absolute;
+    top: 5rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink1 {
+    position: absolute;
+    top: 5rem;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    margin: 0 2rem 0 0;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.hamburgerMenuItemLink:hover {
+    color: $brandYellow !important;
+}
+
+.hamburgerMenuItemLinkActive {
+    color: $brandYellow !important;
+}
+
+.hamburgerMenuRegisterItem {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hamburgerMenuItem {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hamburgerMenuPerfect {
+    height: 100vh;
+}
