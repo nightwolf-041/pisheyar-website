@@ -1,0 +1,19 @@
+.page2PlusIocnBox {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.9rem;
+    height: 2.9rem;
+    background-color: #ffd617;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.page2PlusIocn {
+    font-size: 3rem;
+    color: #0b1033;
+    cursor: pointer;
+}

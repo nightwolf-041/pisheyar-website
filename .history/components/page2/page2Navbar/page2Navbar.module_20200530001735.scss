@@ -1,0 +1,33 @@
+@import '../../../styles/colors.scss';
+.page2Navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: $brandDark;
+}
+
+.page2NavbarContainer {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page2NavbarLoginIcon {
+    font-size: 2rem;
+    color: $brandYellow;
+}
+
+.page2NavbarLogo {
+    width: 4rem;
+}
+
+.page2NavbarHomeImageIcon {
+    width: 2rem;
+}
