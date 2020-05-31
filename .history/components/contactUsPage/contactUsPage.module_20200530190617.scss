@@ -166,10 +166,9 @@
 .contactUsInputRtl {
     direction: rtl;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
-    font-family: Yekan !important;
-    padding: 0.7rem 0.5rem;
+    padding: 0.8rem 0.5rem;
     background-color: $inputs;
     color: $placeholders;
     outline: none;
@@ -180,10 +179,9 @@
 .contactUsInputRtlInvalid {
     direction: rtl;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
-    font-family: Yekan !important;
-    padding: 0.7rem 0.5rem;
+    padding: 0.8rem 0.5rem;
     background-color: $inputs;
     color: $placeholders;
     outline: none;
@@ -194,9 +192,9 @@
 .contactUsInputLtr {
     direction: ltr;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.9rem 0.5rem;
+    padding: 0.8rem 0.5rem;
     background-color: $inputs;
     color: $placeholders;
     outline: none;
@@ -207,9 +205,9 @@
 .contactUsInputLtrInvalid {
     direction: ltr;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.9rem 0.5rem;
+    padding: 0.8rem 0.5rem;
     background-color: $inputs;
     color: $placeholders;
     outline: none;
@@ -219,26 +217,26 @@
 
 .contactUsSelect {
     width: 100%;
-    height: 2.8rem;
+    height: 2.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $inputs;
     color: $placeholders;
-    border: none;
+    border: 1px solid #ffffff;
     outline: none;
     border-radius: 0.4rem;
 }
 
 .contactUsSelectInvalid {
     width: 100%;
-    height: 2.9rem;
+    height: 2.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $inputs;
     color: $placeholders;
-    border: 2px solid rgba(231, 37, 37, 0.8);
+    border: 1px solid red;
     outline: none;
     border-radius: 0.4rem;
 }
@@ -353,6 +351,7 @@
     .contactUsInputRtl {
         padding: 0.7rem 0.5rem;
     }
+    .contactUsSelectInvalid,
     .contactUsSelect {
         height: 2.6rem;
     }

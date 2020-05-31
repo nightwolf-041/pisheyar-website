@@ -16,7 +16,7 @@ const ContactUsInputs = () => {
     let [categoriesLoading, setCategoriesLoading ] = useState(true)
     let [categories, setCategories ] = useState([])
     let [categoriesValid, setCategoriesValid ] = useState(true)
-    let [selectedCategory, setSelectedCategory ] = useState(null)
+    let [selectedCity, setSelectedCity ] = useState(null)
 
     let [sendButtonDisabler, setSendButtonDisabler ] = useState(false)
 
@@ -40,7 +40,7 @@ const ContactUsInputs = () => {
         setPhoneValue(e.target.value)
     }
     const categoriesSelectChangeHandler = (val) => {
-        setSelectedCategory(val)
+        setSelectedCity(val)
     }
 
     const sendData = () => {
@@ -66,13 +66,13 @@ const ContactUsInputs = () => {
             setPhoneValid(true)
         }
 
-        if(selectedCategory === null){
+        if(selectedCity === null){
             setCategoriesValid(false)
         }else{
             setCategoriesValid(true)
         }
 
-        if(nameValue.length !== 0 && emailPattern.test(emailValue) && PhoneValue.length !== 0 && phonePattern.test(PhoneValue) && selectedCategory !== null){
+        if(nameValue.length !== 0 && emailPattern.test(emailValue) && PhoneValue.length !== 0 && phonePattern.test(PhoneValue) && selectedCity !== null){
             setNameValid(true)
             setEmailValid(true)
             setPhoneValid(true)
@@ -83,7 +83,7 @@ const ContactUsInputs = () => {
                 name: nameValue,
                 email: emailValue,
                 phoneNumber: PhoneValue,
-                contactUsBusinessTypeGuid: selectedCategory.codeGuid
+                categoryGuid: selectedCity.codeGuid
             }).then(res =>{
                 console.log(res.data);
                 setSendButtonDisabler(false)

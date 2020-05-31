@@ -78,12 +78,13 @@ const ContactUsInputs = () => {
             setPhoneValid(true)
             setCategoriesValid(true)
             setSendButtonDisabler(true)
+            console.log(selectedCategory.codeGuid);
 
             axios.post('http://185.94.97.164/api/ContactUs/SendMessage', {
                 name: nameValue,
                 email: emailValue,
                 phoneNumber: PhoneValue,
-                contactUsBusinessTypeGuid: selectedCategory.codeGuid
+                categoryGuid: selectedCategory.codeGuid
             }).then(res =>{
                 console.log(res.data);
                 setSendButtonDisabler(false)

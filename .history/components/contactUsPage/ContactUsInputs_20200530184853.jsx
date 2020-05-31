@@ -15,20 +15,17 @@ const ContactUsInputs = () => {
 
     let [categoriesLoading, setCategoriesLoading ] = useState(true)
     let [categories, setCategories ] = useState([])
-    let [categoriesValid, setCategoriesValid ] = useState(true)
-    let [selectedCategory, setSelectedCategory ] = useState(null)
-
-    let [sendButtonDisabler, setSendButtonDisabler ] = useState(false)
+    let [selectedCity, setSelectedCity ] = useState({})
 
     React.useEffect(() => {
         axios.get('http://185.94.97.164/api/Code/GetCodesByCodeGroupGuid?guid=107a7244-6e66-4369-8ba6-dfb0636642c4', {
 
         }).then(res => {
-            console.log(res.data.codes);
+            // console.log(res.data.codes);
             setCategories(res.data.codes)
             setCategoriesLoading(false)
         })
-    }, [])
+    })
 
     const nameInputChangeHandler = (e) => {
         setNameValue(e.target.value)
@@ -40,7 +37,7 @@ const ContactUsInputs = () => {
         setPhoneValue(e.target.value)
     }
     const categoriesSelectChangeHandler = (val) => {
-        setSelectedCategory(val)
+        setSelectedCity(val)
     }
 
     const sendData = () => {
@@ -66,27 +63,18 @@ const ContactUsInputs = () => {
             setPhoneValid(true)
         }
 
-        if(selectedCategory === null){
-            setCategoriesValid(false)
-        }else{
-            setCategoriesValid(true)
-        }
-
-        if(nameValue.length !== 0 && emailPattern.test(emailValue) && PhoneValue.length !== 0 && phonePattern.test(PhoneValue) && selectedCategory !== null){
+        if(nameValue.length !== 0 && emailPattern.test(emailValue) && PhoneValue.length !== 0 && phonePattern.test(PhoneValue)){
             setNameValid(true)
             setEmailValid(true)
             setPhoneValid(true)
-            setCategoriesValid(true)
-            setSendButtonDisabler(true)
 
             axios.post('http://185.94.97.164/api/ContactUs/SendMessage', {
                 name: nameValue,
                 email: emailValue,
                 phoneNumber: PhoneValue,
-                contactUsBusinessTypeGuid: selectedCategory.codeGuid
+                categoryGuid: 'selectedCity.guid'
             }).then(res =>{
                 console.log(res.data);
-                setSendButtonDisabler(false)
             })
         }
     }
@@ -154,9 +142,8 @@ const ContactUsInputs = () => {
                     inputId="contactUsSelect11"
                     instanceId="contactUsSelect22"
                     placeholder="انتخاب کنید"
-                    className={categoriesValid ? 
-                        classes.contactUsSelect : 
-                        classes.contactUsSelectInvalid}
+                    className={classes.contactUsSelect}
+                    defaultValue={!categoriesLoading ? categories[0] : null}
                     label="Single select"
                     isRtl={true}
                     isLoading={categoriesLoading}
@@ -164,13 +151,10 @@ const ContactUsInputs = () => {
                     noOptionsMessage={() => "نتیجه ای یافت نشد"}
                     styles={customStyles}
                     options={categories}
-                    getOptionLabel={option => option.displayName}
-                    getOptionValue={option => option.name}
                     onChange={val => categoriesSelectChangeHandler(val)}
                 />
             </div>
             <button className={classes.contactUsSubmitButton}
-            disabled={sendButtonDisabler}
             onClick={sendData}>
                 ارسال
             </button>

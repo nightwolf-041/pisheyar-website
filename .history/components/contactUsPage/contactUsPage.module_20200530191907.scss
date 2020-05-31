@@ -1,4 +1,8 @@
 @import '../../styles/colors.scss';
+button:disabled {
+    cursor: no-drop;
+}
+
 .contactUsSection {
     position: relative;
     width: 100%;
