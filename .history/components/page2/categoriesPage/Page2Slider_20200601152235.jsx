@@ -73,7 +73,7 @@ function Page2Slider(props) {
     }
 
 
-    const renderByCoundition = () => {
+    renderByCoundition = () => {
         if(props.data !== null && props.data !== [] && props.data !== undefined) {
             if(props.data.length > 3){
                 return(
@@ -97,7 +97,7 @@ function Page2Slider(props) {
                                         </div>
                                         <div className={classes.page2SliderItemButtonBox}>
                                             <Link
-                                            href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
+                                        href={`/category/[id]`} as={`/category/${dt.categoryGuid}`}>
                                                 <a className={classes.page2SliderItemButton}>
                                                     جزئیات
                                                 </a>
@@ -146,7 +146,7 @@ function Page2Slider(props) {
                                 
                                 <div className={classes.page2SliderItemButtonBox}>
                                     <Link
-                                    href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
+                                    href={`/category/[id]`} as={`/category/${dt.categoryGuid}`}>
                                         <a className={classes.page2SliderItemButton}>
                                             جزئیات
                                         </a>

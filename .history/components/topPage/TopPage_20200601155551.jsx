@@ -3,9 +3,6 @@ import React, {Component} from 'react';
 import { TimelineMax, TweenMax } from "gsap";
 import classes from './topPage.module.scss'
 
-import {CSSPlugin} from 'gsap';
-const C = CSSPlugin;
-
 class TopPage extends Component {
 
   constructor(props){

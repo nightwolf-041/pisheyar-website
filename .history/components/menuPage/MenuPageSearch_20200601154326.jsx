@@ -1,14 +1,11 @@
 
 import React, {Component} from 'react';
 import { Scrollbar  } from 'react-scrollbars-custom'
-import { TimelineLite, TimelineMax, TweenLite, TweenMax, Elastic, Power1, Bounce } from "gsap";
-import {CSSPlugin} from 'gsap';
-
+import { TimelineLite, TimelineMax, TweenLite, Elastic, Power1, Bounce } from "gsap/all";
 import Select from 'react-select';
 import axios from 'axios';
 import classes from './menuPage.module.scss'
 
-const C = CSSPlugin;
 class MenuPageSearch extends Component {
 
     constructor(props) {
@@ -39,7 +36,7 @@ class MenuPageSearch extends Component {
         
         this.searchInputsbox = null;
         this.searchCharkhIcon = null;
-        this.desctopMainTween = new TimelineMax();
+        this.desctopMainTween = new TimelineLite({paused: false});
 
 
         this.searchRowMobile = null
@@ -79,14 +76,14 @@ class MenuPageSearch extends Component {
         })
        
         this.charkhIconInterval = setInterval(() => {
-            this.searchCharkhIconTween = new TimelineMax()
+            this.searchCharkhIconTween = new TimelineLite()
             .to(this.searchCharkhIcon, 0.3, {scale: 1.2})
             .to(this.searchCharkhIcon, 0.3, {scale: 0.8})
             .to(this.searchCharkhIcon, 0.4, {scale: 1})
         }, 1700);
 
         this.charkhIconIntervalMbbile = setInterval(() => {
-            this.searchCharkhIconMobileTween = new TimelineMax()
+            this.searchCharkhIconMobileTween = new TimelineLite()
             .to(this.searchCharkhIconMobile, 0.3, {scale: 1.2})
             .to(this.searchCharkhIconMobile, 0.3, {scale: 0.8})
             .to(this.searchCharkhIconMobile, 0.4, {scale: 1})
@@ -102,7 +99,7 @@ class MenuPageSearch extends Component {
             .to(this.searchCharkhIcon, 0.3, {rotation: 360, ease: Power1.linear})
             .to(this.searchInputsbox, 0.5, {width: '80%', autoAlpha: 1, display: 'flex', ease: Bounce.easeOut})
 
-            this.searchRowTween = TweenMax.to(this.searchRow, 0.8, {backgroundColor: '#0b1033', boxShadow: '0 0 12px 8px rgba(11, 16, 51, 0.55)', ease: Power1.easeInOut});
+            this.searchRowTween = TweenLite.to(this.searchRow, 0.8, {backgroundColor: '#0b1033', boxShadow: '0 0 12px 8px rgba(11, 16, 51, 0.55)', ease: Power1.easeInOut});
 
             clearInterval(this.charkhIconInterval)
         } 
@@ -111,12 +108,12 @@ class MenuPageSearch extends Component {
             .to(this.searchCharkhIcon, 0.4, {rotation: -360, ease: Power1.linear})
             .to(this.searchInputsbox, 0.3, {width: 0, autoAlpha: 0, display: 'none', ease: Power1.linear})
          
-            this.searchRowTween = TweenMax.to(this.searchRow, 0.7, {backgroundColor: 'transparent', boxShadow: 'none', ease: Power1.linear, delay: 0.2});
+            this.searchRowTween = TweenLite.to(this.searchRow, 0.7, {backgroundColor: 'transparent', boxShadow: 'none', ease: Power1.linear, delay: 0.2});
 
-            this.searchResultBoxTween = TweenMax.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
+            this.searchResultBoxTween = TweenLite.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
 
             this.charkhIconInterval = setInterval(() => {
-                this.searchCharkhIconTween = new TimelineMax()
+                this.searchCharkhIconTween = new TimelineLite()
                 .to(this.searchCharkhIcon, 0.3, {scale: 1.2})
                 .to(this.searchCharkhIcon, 0.3, {scale: 0.8})
                 .to(this.searchCharkhIcon, 0.4, {scale: 1})
@@ -134,7 +131,7 @@ class MenuPageSearch extends Component {
             .to(this.searchCharkhIconMobile,0.1, {width: '3rem', ease: Power1.easeInOut})
             .to(this.searchInputsboxMobile,0.5, {height: '8.3rem', display: 'flex', autoAlpha: 1, ease: Elastic.easeInOut.config( 1, 0.5)})
 
-            this.searchRowMobileTween = TweenMax.to(this.searchRowMobile, 0.2, {top: '1rem', delay: 0.4, ease: Power1.linear});
+            this.searchRowMobileTween = TweenLite.to(this.searchRowMobile, 0.2, {top: '1rem', delay: 0.4, ease: Power1.linear});
 
             clearInterval(this.charkhIconIntervalMbbile)
             
@@ -145,12 +142,12 @@ class MenuPageSearch extends Component {
         .to(this.searchInputsboxMobile,0.4, {height: 0, autoAlpha: 0, display: 'none', ease: Power1.easeInOut})
         .to(this.searchCharkhIconMobile,0.5, {width: '4rem', ease: Elastic.easeOut.config( 1, 0.2)})
 
-        this.searchRowMobileTween = TweenMax.to(this.searchRowMobile, 0.5, {top: '4rem', delay: 0.4});
+        this.searchRowMobileTween = TweenLite.to(this.searchRowMobile, 0.5, {top: '4rem', delay: 0.4});
 
-        this.searchResultBoxTween = TweenMax.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
+        this.searchResultBoxTween = TweenLite.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
 
         this.charkhIconIntervalMbbile = setInterval(() => {
-            this.searchCharkhIconMobileTween = new TimelineMax()
+            this.searchCharkhIconMobileTween = new TimelineLite()
             .to(this.searchCharkhIconMobile, 0.3, {scale: 1.2})
             .to(this.searchCharkhIconMobile, 0.3, {scale: 0.8})
             .to(this.searchCharkhIconMobile, 0.4, {scale: 1})
@@ -187,16 +184,16 @@ class MenuPageSearch extends Component {
     serachHandler = (e) => {
 
         if(e.target.value !== ''){
-            this.searchResultBoxTween = TweenMax.to(this.searchResultBox, 0.2, {autoAlpha: 1, display: 'block'})
-            this.searchRowTween = TweenMax.to(this.searchRow, 0.2, {borderBottomRightRadius: 0, borderBottomLeftRadius: 0})
+            this.searchResultBoxTween = TweenLite.to(this.searchResultBox, 0.2, {autoAlpha: 1, display: 'block'})
+            this.searchRowTween = TweenLite.to(this.searchRow, 0.2, {borderBottomRightRadius: 0, borderBottomLeftRadius: 0})
 
-            this.searchInputsboxMobileTween = TweenMax.to(this.searchInputsboxMobile, 0.2, {borderBottomRightRadius: 0, borderBottomLeftRadius: 0})
+            this.searchInputsboxMobileTween = TweenLite.to(this.searchInputsboxMobile, 0.2, {borderBottomRightRadius: 0, borderBottomLeftRadius: 0})
         }
         if(e.target.value === ''){
-            this.searchResultBoxTween = TweenMax.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
-            this.searchRowTween = TweenMax.to(this.searchRow, 0.2, {borderBottomRightRadius: '1rem', borderBottomLeftRadius: '1rem'})
+            this.searchResultBoxTween = TweenLite.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
+            this.searchRowTween = TweenLite.to(this.searchRow, 0.2, {borderBottomRightRadius: '1rem', borderBottomLeftRadius: '1rem'})
 
-            this.searchInputsboxMobileTween = TweenMax.to(this.searchInputsboxMobile, 0.2, {borderBottomRightRadius: '1rem', borderBottomLeftRadius: '1rem'})
+            this.searchInputsboxMobileTween = TweenLite.to(this.searchInputsboxMobile, 0.2, {borderBottomRightRadius: '1rem', borderBottomLeftRadius: '1rem'})
         }
 
         this.setState({

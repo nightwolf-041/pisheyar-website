@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import { Scrollbar  } from 'react-scrollbars-custom'
 import { TimelineLite, TimelineMax, TweenLite, TweenMax, Elastic, Power1, Bounce } from "gsap";
-import {CSSPlugin} from 'gsap';
+import CSSPlugin from 'gsap/CSSPlugin';
 
 import Select from 'react-select';
 import axios from 'axios';

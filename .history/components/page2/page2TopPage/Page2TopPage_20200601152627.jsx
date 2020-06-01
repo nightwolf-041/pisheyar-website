@@ -21,7 +21,7 @@ const Page2TopPage = (props) => {
             <img src="/Worker.png" alt="" className={classes.page2TopPageManShape} />
             <div className={classes.page2TopPageTitleBox}>
                 <h1 className={classes.page2TopPageTitle}>
-                    {title}
+                    {props.title}
                 </h1>
             </div>
         </section>

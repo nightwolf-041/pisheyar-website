@@ -77,7 +77,8 @@ function BottomSlider(props) {
                                         </p>
                                         <Link
                                        href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
-                                            <a className={classes.servicesPageSliderBottomCardButton}>
+                                            <a className={classes.servicesPageSliderBottomCardButton}
+                                            onClick={() => props.sendGuidToPage2(dt.categoryGuid)}>
                                                 جزئیات
                                             </a>
                                         </Link>
@@ -116,7 +117,8 @@ function BottomSlider(props) {
                                 </p>
                                 <Link
                                 href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
-                                    <a className={classes.servicesPageSliderBottomCardButton}>
+                                    <a className={classes.servicesPageSliderBottomCardButton}
+                                    onClick={() => props.sendGuidToPage2(dt.categoryGuid)}>
                                         جزئیات
                                     </a>
                                 </Link>

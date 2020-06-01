@@ -1,14 +1,11 @@
 
 import React, {Component} from 'react';
 import { Scrollbar  } from 'react-scrollbars-custom'
-import { TimelineLite, TimelineMax, TweenLite, TweenMax, Elastic, Power1, Bounce } from "gsap";
-import {CSSPlugin} from 'gsap';
-
+import { TimelineLite, TimelineMax, TweenLite, TweenMax, Elastic, Power1, Bounce } from "gsap/all";
 import Select from 'react-select';
 import axios from 'axios';
 import classes from './menuPage.module.scss'
 
-const C = CSSPlugin;
 class MenuPageSearch extends Component {
 
     constructor(props) {
@@ -79,14 +76,14 @@ class MenuPageSearch extends Component {
         })
        
         this.charkhIconInterval = setInterval(() => {
-            this.searchCharkhIconTween = new TimelineMax()
+            this.searchCharkhIconTween = new TimelineLite()
             .to(this.searchCharkhIcon, 0.3, {scale: 1.2})
             .to(this.searchCharkhIcon, 0.3, {scale: 0.8})
             .to(this.searchCharkhIcon, 0.4, {scale: 1})
         }, 1700);
 
         this.charkhIconIntervalMbbile = setInterval(() => {
-            this.searchCharkhIconMobileTween = new TimelineMax()
+            this.searchCharkhIconMobileTween = new TimelineLite()
             .to(this.searchCharkhIconMobile, 0.3, {scale: 1.2})
             .to(this.searchCharkhIconMobile, 0.3, {scale: 0.8})
             .to(this.searchCharkhIconMobile, 0.4, {scale: 1})
@@ -116,7 +113,7 @@ class MenuPageSearch extends Component {
             this.searchResultBoxTween = TweenMax.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
 
             this.charkhIconInterval = setInterval(() => {
-                this.searchCharkhIconTween = new TimelineMax()
+                this.searchCharkhIconTween = new TimelineLite()
                 .to(this.searchCharkhIcon, 0.3, {scale: 1.2})
                 .to(this.searchCharkhIcon, 0.3, {scale: 0.8})
                 .to(this.searchCharkhIcon, 0.4, {scale: 1})
@@ -150,7 +147,7 @@ class MenuPageSearch extends Component {
         this.searchResultBoxTween = TweenMax.to(this.searchResultBox, 0.2, {autoAlpha: 0, display: 'none'})
 
         this.charkhIconIntervalMbbile = setInterval(() => {
-            this.searchCharkhIconMobileTween = new TimelineMax()
+            this.searchCharkhIconMobileTween = new TimelineLite()
             .to(this.searchCharkhIconMobile, 0.3, {scale: 1.2})
             .to(this.searchCharkhIconMobile, 0.3, {scale: 0.8})
             .to(this.searchCharkhIconMobile, 0.4, {scale: 1})

@@ -58,9 +58,8 @@ function BottomSlider(props) {
                 <div className={classes.servicesPageSliderBottomSliderbox}>
                     <Swiper {...params } getSwiper={updateSwiper}>
                         {data !== null && data !== [] ?
-                            data.map((dt, index) => (
-                                <div className={classes.servicesPageSliderBottomCard}
-                                key={index}>
+                            data.map(dt => (
+                                <div className={classes.servicesPageSliderBottomCard}>
                                     <div className={classes.servicesPageSliderBottomCardImgbox}>
                                         <img src="/services-left.jpg" alt=""
                                         className={classes.servicesPageSliderBottomCardImage} />
@@ -76,8 +75,9 @@ function BottomSlider(props) {
                                             {dt.abstract}
                                         </p>
                                         <Link
-                                       href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
-                                            <a className={classes.servicesPageSliderBottomCardButton}>
+                                       href={`/category/[...id].js`} as={`/category/${dt.title}/${dt.categoryGuid}`}>
+                                            <a className={classes.servicesPageSliderBottomCardButton}
+                                            onClick={() => props.sendGuidToPage2(dt.categoryGuid)}>
                                                 جزئیات
                                             </a>
                                         </Link>
@@ -97,9 +97,8 @@ function BottomSlider(props) {
             :
             <div className={classes.servicesPageLessItemsBoxBottom}>
                 {data !== null && data !== [] ?
-                    data.map((dt, index) => (
-                        <div className={classes.servicesPageSliderBottomCardBottomSlider}
-                        key={index}>
+                    data.map(dt => (
+                        <div className={classes.servicesPageSliderBottomCardBottomSlider}>
                             <div className={classes.servicesPageSliderBottomCardImgbox}>
                                 <img src="/services-left.jpg" alt=""
                                 className={classes.servicesPageSliderBottomCardImage} />
@@ -115,8 +114,9 @@ function BottomSlider(props) {
                                     {dt.abstract}
                                 </p>
                                 <Link
-                                href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
-                                    <a className={classes.servicesPageSliderBottomCardButton}>
+                                href={`/category/[...id].js`} as={`/category//${dt.title}/${dt.categoryGuid}`}>
+                                    <a className={classes.servicesPageSliderBottomCardButton}
+                                    onClick={() => props.sendGuidToPage2(dt.categoryGuid)}>
                                         جزئیات
                                     </a>
                                 </Link>

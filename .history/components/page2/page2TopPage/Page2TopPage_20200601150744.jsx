@@ -5,12 +5,10 @@ import classes from './page2TopPage.module.scss'
 const Page2TopPage = (props) => {
     console.log(props.categoryInfo);
 
-    let source, title
-    if(props.categoryInfo !== undefined && props.categoryInfo !== null && props.categoryInfo !== []){
+    if(props.as){
         const categoryInfo = props.categoryInfo
         let coverDoc = {...categoryInfo.coverDocument}
-        source = coverDoc.source
-        title = props.categoryInfo.title
+        let source = coverDoc.source
     }
 
     return(
@@ -21,7 +19,7 @@ const Page2TopPage = (props) => {
             <img src="/Worker.png" alt="" className={classes.page2TopPageManShape} />
             <div className={classes.page2TopPageTitleBox}>
                 <h1 className={classes.page2TopPageTitle}>
-                    {title}
+                    {props.givenTitle}
                 </h1>
             </div>
         </section>

@@ -97,7 +97,8 @@ function Page2Slider(props) {
                                         </div>
                                         <div className={classes.page2SliderItemButtonBox}>
                                             <Link
-                                            href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
+                                            href={`/category/[...slug].js`} as={`/category//${dt.title.replace(/ /g,'-')
+                                            .replace(/[^\w-]+/g,'')}/${dt.categoryGuid}`}>
                                                 <a className={classes.page2SliderItemButton}>
                                                     جزئیات
                                                 </a>
@@ -146,7 +147,8 @@ function Page2Slider(props) {
                                 
                                 <div className={classes.page2SliderItemButtonBox}>
                                     <Link
-                                    href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
+                                    href={`/category/[...slug].js`} as={`/category//${dt.title.replace(/ /g,'-')
+                                    .replace(/[^\w-]+/g,'')}/${dt.categoryGuid}`}>
                                         <a className={classes.page2SliderItemButton}>
                                             جزئیات
                                         </a>

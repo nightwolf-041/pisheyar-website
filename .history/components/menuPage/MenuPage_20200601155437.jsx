@@ -5,7 +5,6 @@ import MenuPageSearch from './MenuPageSearch'
 import classes from './menuPage.module.scss'
 
 import {CSSPlugin} from 'gsap';
-const C = CSSPlugin;
 
 class MenuPage extends Component {
 

@@ -1,14 +1,12 @@
 
 import React, {Component} from 'react';
 import { Scrollbar  } from 'react-scrollbars-custom'
-import { TimelineLite, TimelineMax, TweenLite, TweenMax, Elastic, Power1, Bounce } from "gsap";
-import {CSSPlugin} from 'gsap';
-
+import { TimelineLite, TimelineMax,  Elastic, Power1, Bounce } from "gsap/all";
+// import { TimelineLite, TimelineMax } from "gsap/all";
 import Select from 'react-select';
 import axios from 'axios';
 import classes from './menuPage.module.scss'
 
-const C = CSSPlugin;
 class MenuPageSearch extends Component {
 
     constructor(props) {
