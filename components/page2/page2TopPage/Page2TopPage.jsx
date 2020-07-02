@@ -1,26 +1,44 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import { TweenMax } from "gsap";
+import {CSSPlugin} from 'gsap';
 import classes from './page2TopPage.module.scss'
 
+const C = CSSPlugin;
 
 const Page2TopPage = (props) => {
-    console.log(props.categoryInfo);
+    const imageRight = useRef()
+    const titleLeft = useRef()
 
-    let source, title
+    useEffect(() => {
+        TweenMax.to(imageRight.current, 1, {
+            marginRight: 0,
+        }, 0.5);
+        TweenMax.to(titleLeft.current, 1, {
+            marginLeft: 0,
+        }, 0.5);
+    }, [])
+
+    let background, title, secondCover
     if(props.categoryInfo !== undefined && props.categoryInfo !== null && props.categoryInfo !== []){
         const categoryInfo = props.categoryInfo
         let coverDoc = {...categoryInfo.coverDocument}
-        source = coverDoc.source
+        background = coverDoc.source
+        let secondCoverDoc = {...categoryInfo.secondPageCoverDocument}
+        secondCover = secondCoverDoc.source
         title = props.categoryInfo.title
     }
 
     return(
         <section className={classes.page2TopPage}>
-            <img src={source} alt=""
+            <img src={background} alt=""
             className={classes.page2TopPageImage} />
             <div className={classes.page2TopPageBackdrop}></div>
-            <img src="/Worker.png" alt="" className={classes.page2TopPageManShape} />
+            <img src={secondCover} alt=""
+            ref={element => {imageRight.current = element}}
+            className={classes.page2TopPageManShape} />
             <div className={classes.page2TopPageTitleBox}>
-                <h1 className={classes.page2TopPageTitle}>
+                <h1 className={classes.page2TopPageTitle}
+            ref={element => {titleLeft.current = element}}>
                     {title}
                 </h1>
             </div>

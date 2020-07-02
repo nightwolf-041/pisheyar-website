@@ -33,7 +33,7 @@
 }
 
 .navbarMobileLogo {
-    width: 3.5rem;
+    width: 3.2rem;
 }
 
 .navbarContainer {
@@ -72,6 +72,7 @@
     font-size: 1.1rem;
     margin: 0 2rem 0 0;
     cursor: pointer;
+    text-shadow: -1px -1px 0 $brandDarkOltraLight, 1px -1px 0 $brandDarkOltraLight, -1px 1px 0 $brandDarkOltraLight, 1px 1px 0 $brandDarkOltraLight !important;
 }
 
 .navbarSmoothLink:hover {
@@ -79,11 +80,11 @@
 }
 
 .navbarLogo {
-    width: 7rem;
+    width: 4rem;
 }
 
 .navbarLogoToggle {
-    width: 12rem;
+    width: 4rem;
 }
 
 .activeLink {
@@ -95,6 +96,7 @@
         display: none;
     }
     .navbarMobileContainer {
+        height: 4.2rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

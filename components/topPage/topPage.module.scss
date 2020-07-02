@@ -73,9 +73,27 @@
     overflow: hidden;
 }
 
+.homeHeaderImagesbox2{
+    margin-top: 0;
+}
+
+.headerImage1{
+    margin-top: 7rem;
+}
+
+.headerImage1,
+.headerImage2{
+    width: 19rem;
+}
+
+.headerImage3{
+    margin-top: 6rem;
+    width: 25rem;
+}
+
 .homeHeaderTitlebox {
-    width: 30rem;
-    height: 10rem;
+    width: 35rem;
+    height: 11rem;
     position: absolute;
     top: 25rem;
     right: 40%;
@@ -85,8 +103,8 @@
 
 .homeHeaderTitlebox2,
 .homeHeaderTitlebox3 {
-    width: 30rem;
-    height: 10rem;
+    width: 35rem;
+    height: 11rem;
     position: absolute;
     top: 25rem;
     right: 40%;
@@ -98,12 +116,14 @@
 .homeHeaderTitlebox3 h1,
 .homeHeaderTitlebox2 h1,
 .homeHeaderTitlebox h1 {
+    direction: rtl;
     margin-top: 0;
-    font-size: 2.7rem;
-    word-spacing: 0.3rem;
-    line-height: 4.5rem;
+    font-size: 2.5rem;
+    word-spacing: 0.1rem;
+    line-height: 3.5rem;
     color: $title;
-    text-align: right;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .homeHeaderButtonbox {
@@ -175,25 +195,30 @@
 
 @media screen and (max-width: 1200px) {
     .homeHeaderTitlebox {
-        right: 44%;
+        width: 30rem;
+        right: 40%;
     }
     .homeHeaderTitlebox2,
     .homeHeaderTitlebox3 {
-        right: 44%;
+        width: 30rem;
+        right: 40%;
     }
     .homeHeaderButtonbox {
-        right: 44%;
+        right: 40%;
     }
     .homeHeaderButtonbox2,
     .homeHeaderButtonbox3 {
-        right: 44%;
+        right: 40%;
     }
     .homeHeaderTitlebox3 h1,
     .homeHeaderTitlebox2 h1,
     .homeHeaderTitlebox h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         word-spacing: 0.3rem;
-        line-height: 4.3rem;
+        line-height: 3.3rem;
+    }
+    .headerImage3{
+        width: 22rem;
     }
 }
 
@@ -305,10 +330,19 @@
 }
 
 @media screen and (max-width: 500px) {
+    .homeHeaderTitlebox,
+    .homeHeaderTitlebox2,
+    .homeHeaderTitlebox3 {
+        right: 10%;
+        width: 80%;
+        height: auto;
+        top: 11rem;
+    }
     .homeHeaderTitlebox h1,
     .homeHeaderTitlebox2 h1,
     .homeHeaderTitlebox3 h1 {
         margin-bottom: 1.5rem;
+         font-size: 1.6rem;
     }
     .homeBackgroundEllipse {
         width: 120%;
@@ -327,14 +361,26 @@
     }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1560px) {
     .homeBackgroundEllipse {
         width: 60%;
     }
 }
 
+@media screen and (min-width: 1700px) {
+    .homeBackgroundEllipse {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .homeBackgroundEllipse {
+        width: 50%;
+    }
+}
+
 @media screen and (min-width: 2100px) {
     .homeBackgroundEllipse {
-        width: 60%;
+        width: 45%;
     }
 }

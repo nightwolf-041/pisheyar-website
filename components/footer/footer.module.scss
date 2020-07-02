@@ -32,11 +32,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .footerLogo {
-    width: 14rem;
+    width: 10rem;
     margin-bottom: 1.5rem;
 }
 
@@ -90,6 +91,7 @@
     color: $brandYellow;
     font-size: 1rem;
     margin: 0 0.5rem;
+    cursor: pointer;
 }
 
 .footerLinksbox {
@@ -214,6 +216,9 @@
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 2rem;
+    }
+    .footerLogo {
+        width: 12rem;
     }
     .footerTop {
         // flex-direction: row;

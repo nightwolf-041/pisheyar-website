@@ -40,18 +40,6 @@ const ServicesPage = () => {
           centeredSlides: true,
           slidesPerView: 'auto',
           spaceBetween: 0,
-        //   breakpoints: {
-        //     576: {
-        //         centeredSlides: true,
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 0,
-        //     },
-        //     300: {
-        //         centeredSlides: true,
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 0,
-        //     },
-        // }
         }
 
         
@@ -62,7 +50,7 @@ const ServicesPage = () => {
                 <div className={classes.servicesPageTitlebox}>
                     <h4 className={classes.servicesPageTitle}><b>خدمات</b> ما</h4>
                     <p className={classes.servicesPageSubtitle}>
-                        خدمات پیشه یار یکی از برترین خدمات صنعتی شناخته شده که به شما کمک می کند از متنوع ترین خدمات صنعتی مطلع و در صورت نیاز با مراجعه به دسته بندی، خدمات مورد نیاز را پیدا کنید و همچنین با مراجعه به اپلیکیشن پیشه یار سفارشات خود را به اتمام برسانید.
+                      پیشه پلاس اولین سامانه ارائه  خدمات صنعتی ایران، به شما کمک می کند از متنوع ترین خدمات صنعتی مطلع و در صورت نیاز با مراجعه به دسته بندی و یا جستجو، خدمات مورد نیاز خود را پیدا کنید و همچنین با مراجعه به اپلیکیشن پیشه پلاس سفارشات خود را پیگیری و به اتمام برسانید.
                     </p>
                 </div>
                 <TopSlider

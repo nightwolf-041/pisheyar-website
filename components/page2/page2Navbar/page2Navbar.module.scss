@@ -29,16 +29,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .page2NavbarLoginIcon {
     font-size: 2rem;
     color: $brandYellow;
-    cursor: pointer;
 }
 
 .page2NavbarLogo {
-    width: 7rem;
+    width: 10rem;
 }
 
 .page2NavbarHomeImageIconBox {
@@ -49,9 +49,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .page2NavbarHomeImageIcon {
     width: 2rem;
-    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .page2NavbarLoginIcon {
+        font-size: 1.6rem;
+    }
+    .page2NavbarHomeImageIcon {
+        width: 1.6rem;
+    }
+    .page2NavbarLoginIconBox,
+    .page2NavbarHomeImageIconBox {
+        width: 3rem;
+        height: 3rem;
+    }
 }

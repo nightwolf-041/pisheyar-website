@@ -27,21 +27,21 @@ const ContactUsPage = () => {
                             <FontAwesomeIcon icon={faPhoneAlt}
                                 className={classes.contactUsCallBottomItemImage} />
                             <span className={classes.contactUsCallBottomItemSpan}>
-                                +98 910 834 7428
+                                021-88833746
                             </span>
                         </div>
                         <div className={classes.contactUsCallBottomItem}>
                             <FontAwesomeIcon icon={faEnvelope}
                                 className={classes.contactUsCallBottomItemImage} />
                             <span className={classes.contactUsCallBottomItemSpan}>
-                                white.luciferrr@gmail.com
+                                info@pisheplus.com
                             </span>
                         </div>
                         <div className={classes.contactUsCallBottomItem}>
                             <FontAwesomeIcon icon={faInstagram}
                                 className={classes.contactUsCallBottomItemImage} />
                             <span className={classes.contactUsCallBottomItemSpan}>
-                                mmd.7__kqzi
+                                pisheplus
                             </span>
                         </div>
                     </div>

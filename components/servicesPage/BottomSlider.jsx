@@ -16,7 +16,7 @@ function BottomSlider(props) {
 
     React.useEffect(() => {
         if(props.givenGuid === undefined || props.givenGuid === null) {
-            axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=f32c3568-d38a-42d2-9fbe-6d9bf40ec535`)
+            axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=e3b1e3a1-4d79-454d-8b1f-6c9e24e290b2`)
             .then(res => {
                 console.log(res.data.primaryCategories);
                 setData(res.data.primaryCategories)
@@ -24,6 +24,7 @@ function BottomSlider(props) {
         }else{
             console.log('object');
             setData(props.dataForBottom)
+            console.log(props.dataForBottom);
         }
     }, [props.givenGuid])
 
@@ -112,7 +113,7 @@ function BottomSlider(props) {
                         className={classes.servicesPageSliderRightArrowGear} />
                     </div>
                 )
-            }else if(data.length <=2 && data.length > 0) {
+            }else if(data.length <= 2 && data.length > 0) {
                 return (
                     <div className={classes.servicesPageLessItemsBoxBottom}>
                     {data !== null && data !== [] ?

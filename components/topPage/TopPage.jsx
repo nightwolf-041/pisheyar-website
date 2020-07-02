@@ -350,35 +350,35 @@ class TopPage extends Component {
               </div>
               <div id="headerImage1box" className={classes.homeHeaderImagesbox}
               ref={div => this.headerImage1box = div}>
-                <img src="/about-man.png" alt="img1"
+                <img src="/logo-plus.svg" alt="img1"
                 className={classes.headerImage1} />
               </div>
               <div id="headerImage2box" className={classes.homeHeaderImagesbox2}
               ref={div => this.headerImage2box = div}>
-                <img src="/Background.png" alt="img2"
+                <img src="/slide-phone.png" alt="img2"
                 className={classes.headerImage2} />
               </div>
               <div id="headerImage3box" className={classes.homeHeaderImagesbox3}
               ref={div => this.headerImage3box = div}>
-                <img src="/Einweganzug-Karneval.png" alt="img2"
+                <img src="/slide-three.png" alt="img2"
                 className={classes.headerImage3} />
               </div>
               <div id="headerTitle1box" className={classes.homeHeaderTitlebox}
               ref={div => this.headerTitle1box = div}>
                 <h1>
-                  با پیشه یار از خدمات متنوع صنعتی باخبر شوید
+                  اولین سامانه ارتباط دهنده مستقیم بین خدمات دهنده / گیرنده صنعتی در ایران
                 </h1>
               </div>
               <div id="headerTitle2box" className={classes.homeHeaderTitlebox2}
               ref={div => this.headerTitle2box = div} >
                 <h1>
-                  با پیشه یار از اخبار ما هم خبردار شید
+                  برای پیوستن به خانواده پیشه پلاس هم اکنون اپلیکیشن خود را دانلود کنید
                 </h1>
               </div>
               <div id="headerTitle3box" className={classes.homeHeaderTitlebox3}
               ref={div => this.headerTitle3box = div} >
                 <h1>
-                  با پیشه یار از اخبار ما هم خبردار شید
+                  همین حالا با پیشه پلاس کسب و کار خود راگسترش دهید
                 </h1>
               </div>
               <div id="headerButtonbox1Box" className={classes.homeHeaderButtonbox}
@@ -395,7 +395,7 @@ class TopPage extends Component {
                 <div className={classes.homeHeaderButtonboxKeeper}>
                   <button className={classes.homeHeaderButtonboxBtn}>مشاهده</button>
                   <p className={classes.homeHeaderButtonboxText}>
-                    همین حالا از خدمات ما مطلع شوید
+                    مشاهده اپلیکیشن های ما
                   </p>
                 </div>
               </div>

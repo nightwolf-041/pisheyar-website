@@ -13,7 +13,7 @@ const Footer = (props) => {
                 <div className={classes.footerTop}>
                     <div className={classes.footerLogobox}>
                         <div className={classes.footerLogoKeeper}>
-                            <img src="/WhiteLogo.svg" alt="" className={classes.footerLogo} />
+                            <img src="/loge_full_yellow_with_txt.svg" alt="" className={classes.footerLogo} />
                         </div>
                         <div className={classes.footerAddressbox}>
                             <div className={classes.footerAddressboxItem}>
@@ -25,18 +25,22 @@ const Footer = (props) => {
                             <div className={classes.footerAddressboxItem}>
                                 <FontAwesomeIcon icon={faPhoneAlt} className={classes.footerAddressboxItemIcon} />
                                 <span className={classes.footerAddressboxItemSpan}>
-                                    +98 910 834 7428
+                                    021-88833746
                                 </span>
                             </div>
                             <div className={classes.footerAddressboxItem}>
                                 <FontAwesomeIcon icon={faEnvelope} className={classes.footerAddressboxItemIcon} />
                                 <span className={classes.footerAddressboxItemSpan}>
-                                    white.luciferrr@gmail.com
+                                    info@pisheplus.com
                                 </span>
                             </div>
                             <div className={classes.footerAddressboxSocialsbox}>
-                                <FontAwesomeIcon icon={faInstagram} className={classes.footerAddressboxSocialIcon} />
-                                <FontAwesomeIcon icon={faWhatsapp} className={classes.footerAddressboxSocialIcon} />
+                                <a href="https://www.instagram.com/pisheplus">
+                                    <FontAwesomeIcon icon={faInstagram} className={classes.footerAddressboxSocialIcon} />
+                                </a>
+                                <a href="https://wa.me/">
+                                    <FontAwesomeIcon icon={faWhatsapp} className={classes.footerAddressboxSocialIcon} />
+                                </a>
                             </div>
                         </div>
                     </div>

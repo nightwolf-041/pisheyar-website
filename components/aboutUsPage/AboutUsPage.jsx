@@ -9,42 +9,40 @@ const AboutUsPage = () => {
                     <img src="/Background.png" alt="back" className={classes.aboutUsLeftImage} />
                 </div>
                 <div className={classes.aboutUsRightTop}>
-                    <h4 className={classes.aboutUsRightTopTitle}>درباره پیشه یار</h4>
+                    <h4 className={classes.aboutUsRightTopTitle}>درباره پیشه پلاس</h4>
                     <div className={classes.aboutUsRightTopDivider}></div>
                     <p className={classes.aboutUsRightTopDesc}>
-                        با یکی از بهترین سایت های خدماتی در سراسر ایران آشنا شوید.
-                        <br />
-                        پیشه یار خدمات صنعتی متنوعیدر اختیار کاربران خودقرار میدهد تا آنان از بین انبوهی از این خدمات، خدمت مورد نیاز خود را انتخاب کنند.
+                        ما در پیشه پلاس  برای اولین بار در ایران با هدف سهولت در ارتباط آسان و پویا میان خدمات دهندگان و خدمات گیرندگان صنعتی  توانستیم،  با ایجاد بستری مناسب قدمی هر چند کوچک در پیشرفت و سهولت خدمات دهی صنعتی برداریم.
                     </p>
                 </div>
                 <div className={classes.aboutUsRightBottom}>
                     <div className={classes.aboutUsRightBottomItemsbox}>
                         <div className={classes.aboutUsRightBottomItem}>
                             <img src="about-employee.svg" alt="icon" className={classes.aboutUsRightBottomItemIcon} />
-                            <h4 className={classes.aboutUsRightBottomItemTitle}>بهترین متخصصین</h4>
+                            <h4 className={classes.aboutUsRightBottomItemTitle}>بهترین متخصص</h4>
                             <p className={classes.aboutUsRightBottomItemSubtitle}>
-                                فراهم آورنده ی بهترین خدمات صنعتی برای متقاضیان
+                                بهترین خدمات را با بهترین متخصصین صنعتی تجربه کنید
                             </p>
                         </div>
                         <div className={classes.aboutUsRightBottomItem}>
                             <img src="about-service.svg" alt="icon" className={classes.aboutUsRightBottomItemIcon} />
                             <h4 className={classes.aboutUsRightBottomItemTitle}>بهترین خدمات</h4>
                             <p className={classes.aboutUsRightBottomItemSubtitle}>
-                                فراهم آورنده ی بهترین خدمات صنعتی برای متقاضیان
+                                با نظارت دقیق بر متخصصات کیفیت خدمات را تضمین میکنیم
                             </p>
                         </div>
                         <div className={classes.aboutUsRightBottomItem}>
                             <img src="about-badge.svg" alt="icon" className={classes.aboutUsRightBottomItemIcon} />
                             <h4 className={classes.aboutUsRightBottomItemTitle}>بهترین کیفیت</h4>
                             <p className={classes.aboutUsRightBottomItemSubtitle}>
-                                فراهم آورنده ی بهترین خدمات صنعتی برای متقاضیان
+                                بهترین کیفیت خدمات دهی را با ما تجربه کنید
                             </p>
                         </div>
                         <div className={classes.aboutUsRightBottomItem}>
                             <img src="about-clock.svg" alt="icon" className={classes.aboutUsRightBottomItemIcon} />
                             <h4 className={classes.aboutUsRightBottomItemTitle}>پاسخگویی سریع</h4>
                             <p className={classes.aboutUsRightBottomItemSubtitle}>
-                                فراهم آورنده ی بهترین خدمات صنعتی برای متقاضیان
+                                همکاران ما در هر زمان آماده پاسخ گویی به مشکلات شما هستند
                             </p>
                         </div>
                     </div>

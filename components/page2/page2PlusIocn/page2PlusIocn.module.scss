@@ -1,0 +1,36 @@
+.page2PlusIocnBox {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color: #0b1033;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease-in
+}
+
+.page2PlusIocnBox:hover{
+    width: 10rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    transition: all 0.3s ease-in;
+}
+
+.page2PlusIocn {
+    font-size: 1.3rem;
+    color: #ffd617;
+}
+
+.page2PlusIocnSpan{
+    color: #ffd617;
+    font-size: 0.8rem;
+    display: none;
+    opacity: 0
+}

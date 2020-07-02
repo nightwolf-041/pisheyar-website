@@ -24,7 +24,7 @@ const Navbar = (props) => {
             <div className={classes.navbarMobileContainer}>
                 <FontAwesomeIcon icon={props.toggle ? faTimes : faBars} className={classes.navbarHamburgerIcon}
                 onClick={props.hamburgerToggleHandler} />
-                <img src="/pisheyar-single-white.png" alt="" className={classes.navbarMobileLogo} />
+                <img src="/loge_full_yellow.svg" alt="" className={classes.navbarMobileLogo} />
             </div>
             <div className={classes.navbarContainer}>
                 <div className={classes.navbarLinks}>
@@ -63,11 +63,7 @@ const Navbar = (props) => {
                         ارتباط با ما
                     </Link>
                 </div>
-                {onTop ? 
-                <img src="/pishe.png" alt="pisheyar" className={classes.navbarLogo} /> 
-                :
-                <img src="/WhiteLogo.svg" alt="pisheyar" className={classes.navbarLogoToggle} />
-                }
+                <img src="/logo-plus.svg" alt="pisheyar" className={classes.navbarLogo} />
             </div>
         </nav>
     )
