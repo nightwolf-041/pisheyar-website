@@ -86,7 +86,7 @@ const Footer = (props) => {
                             smooth={true} duration={500} className={classes.footerLinksboxLink}>
                                 خانه
                             </Link>
-                            <a href="#" className={classes.footerLinksboxLink}>ثبتنام / ورود</a>
+                            <a href="#" className={classes.footerLinksboxLink}>ثبت نام / ورود</a>
                             {props.indexPage ?
                                 <>
                                 <Link activeClass={classes.activeLink} to="aboutUsPage" spy={true}

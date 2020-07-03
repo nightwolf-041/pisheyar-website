@@ -27,9 +27,10 @@ const page2 = (props) => {
   return (
     <>
       <Head>
-        <title>{rgxedTitle}</title>
+        <title>پیشه پلاس | {rgxedTitle}</title>
         <meta name="description" content="سایت رسمی پیشه یار" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <Page2Navbar />

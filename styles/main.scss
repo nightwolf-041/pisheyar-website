@@ -32,6 +32,11 @@ a:hover {
     text-decoration: none;
 }
 
+.slick-slider, .slick-list, .slick-track{
+    height: 29rem;
+}
+
+
 .swiper-pagination-application {
     display: flex;
     justify-content: center;
@@ -120,6 +125,12 @@ a:hover {
     margin-bottom: 5rem;
 }
 
+@media (max-width: 576px) {
+    .slick-slider, .slick-list, .slick-track{
+        height: 25rem;
+    }
+}
+
 @media (max-width: 500px) {
     .sliderContainer {
         margin-top: 17rem;
@@ -129,6 +140,10 @@ a:hover {
 @media (max-width: 400px) {
     .sliderContainer {
         width: 100%;
+    }
+    .slick-slider{
+        width: 140%;
+        margin-left: -17%;
     }
 }
 

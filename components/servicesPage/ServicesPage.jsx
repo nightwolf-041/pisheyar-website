@@ -12,11 +12,19 @@ const ServicesPage = () => {
     const [dataForBottom, setdDtaForBottom] = useState([]);
     const [dataForPage2, setdDtaForPage2] = useState(null);
 
+    React.useEffect(() => {
+      axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=e3b1e3a1-4d79-454d-8b1f-6c9e24e290b2`)
+      .then(res => {
+          console.log(res.data.primaryCategories);
+          setdDtaForBottom(res.data.primaryCategories)
+      })
+    }, [])
+
     const sendGuidToBottomSlider = guid => {
+      setBottomSliderGuid(guid)
       axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=${guid}`)
       .then(res => {
         setdDtaForBottom(res.data.primaryCategories)
-        setBottomSliderGuid(guid)
       })
     }
 
