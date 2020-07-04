@@ -159,25 +159,20 @@
 }
 
 .homeHeaderButtonboxBtn {
-    width: 9rem;
-    padding: 7px 15px;
+    text-align: center;
+    width: 10rem;
+    padding: 3px 15px;
     background-color: #f2f2f2;
     border: 2px solid $brandYellow;
     border-radius: 2rem;
     color: $brandDark;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: Yekan !important;
     cursor: pointer;
     transition: 0.2s all ease-in;
     z-index: 2;
 }
 
-// .homeHeaderButtonboxKeeper button:hover {
-//     background-color: $brandDark;
-//     color: $brandYellow;
-//     border: 2px solid $brandYellow;
-//     transition: 0.2s all ease-in;
-// }
 .homeHeaderButtonboxBtn:hover {
     background-color: $brandDark;
     color: $brandYellow;

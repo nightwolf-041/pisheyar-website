@@ -24,7 +24,7 @@ const Footer = (props) => {
                             </div>
                             <div className={classes.footerAddressboxItem}>
                                 <FontAwesomeIcon icon={faPhoneAlt} className={classes.footerAddressboxItemIcon} />
-                                <span className={classes.footerAddressboxItemSpan}>
+                                <span className={[classes.footerAddressboxItemSpan, classes.footerAddressboxItemSpanMobile].join(' ')}>
                                     021-88833746
                                 </span>
                             </div>

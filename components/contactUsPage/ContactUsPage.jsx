@@ -26,7 +26,7 @@ const ContactUsPage = () => {
                         <div className={classes.contactUsCallBottomItem}>
                             <FontAwesomeIcon icon={faPhoneAlt}
                                 className={classes.contactUsCallBottomItemImage} />
-                            <span className={classes.contactUsCallBottomItemSpan}>
+                            <span className={[classes.contactUsCallBottomItemSpan, classes.contactUsCallBottomItemSpanMobile].join(' ')}>
                                 021-88833746
                             </span>
                         </div>

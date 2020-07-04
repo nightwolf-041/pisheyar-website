@@ -4,7 +4,7 @@
     width: 100%;
     height: auto;
     background-color: #f2f2f2;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
 }
 
 .servicesPageTitlebox {
@@ -510,12 +510,12 @@
     .servicesPageSliderLeftArrowGear {
         width: 1.5rem;
         left: -0.2rem;
-        top: 18%;
+        top: 40%;
     }
     .servicesPageSliderRightArrowGear {
         width: 1.5rem;
         right: -0.2rem;
-        top: 18%;
+        top: 40%;
     }
 }
 
@@ -553,12 +553,10 @@
     .servicesPageSliderLeftArrowGear {
         width: 1.5rem;
         left: -0.4rem;
-        display: none;
     }
     .servicesPageSliderRightArrowGear {
         width: 1.5rem;
         right: -0.4rem;
-          display: none;
     }
 }
 
@@ -570,6 +568,12 @@
     .servicesPageSliderRightArrowGear {
         width: 1.5rem;
         right: -0.7rem;
+    }
+     .servicesPageSliderLeftArrowGear {
+        display: none;
+    }
+    .servicesPageSliderRightArrowGear {
+        display: none;
     }
 }
 
