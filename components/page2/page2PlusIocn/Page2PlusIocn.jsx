@@ -13,29 +13,55 @@ function Page2PlusIocn() {
 
     const mouseEnterPlus = () => {
         setToggle(true)
+        TweenMax.to(page2PlusIocnSpan.current, 0, {
+            display: 'block',
+            opacity: 0,
+            delay: 0
+        }, 0);
+        TweenMax.to(page2PlusIocnSpan.current, 0.3, {
+            opacity: 1,
+            delay: 0.6
+        });
     }
 
     const mouseLeavePlus = () => {
         setToggle(false)
+        TweenMax.to(page2PlusIocnSpan.current, 0.1, {
+            display: 'none',
+            opacity: 0,
+        }, 0.4);
     }
 
-    if(toggle) {
+    const hoverOnPlus = () => {
+        // setToggle(false)
         TweenMax.to(page2PlusIocnSpan.current, 0, {
             display: 'block',
             opacity: 0,
-            delay: 0.2
+            delay: 0.4
         }, 0);
         TweenMax.to(page2PlusIocnSpan.current, 0.4, {
             opacity: 1,
             delay: 0.4
         }, 0.4);
     }
-    if(!toggle) {
-          TweenMax.to(page2PlusIocnSpan.current, 0.1, {
-            display: 'none',
-            opacity: 0,
-        }, 0.4);
-    }
+
+    // if(toggle) {
+    //     TweenMax.to(page2PlusIocnSpan.current, 0, {
+    //         display: 'block',
+    //         opacity: 0,
+    //         delay: 0.4
+    //     }, 0);
+    //     TweenMax.to(page2PlusIocnSpan.current, 0.4, {
+    //         opacity: 1,
+    //         delay: 0.4
+    //     }, 0.4);
+    // }
+    // if(!toggle) {
+    //     TweenMax.to(page2PlusIocnSpan.current, 0.1, {
+    //         display: 'none',
+    //         opacity: 0,
+    //     }, 0.4);
+    // }
 
     return (
        <div className={classes.page2PlusIocnBox}

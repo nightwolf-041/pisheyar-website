@@ -15,7 +15,6 @@ const page2 = (props) => {
   const router = useRouter()
   const givenTitle =  router.query.slug[0]
   let rgxedTitle = givenTitle.replace(/-/g, " ")
-
   const description = props.categoryData.description
 
   let [hamburgerToggler, setHamburgerToggler] = useState(false)
@@ -24,12 +23,20 @@ const page2 = (props) => {
     setHamburgerToggler(hamburgerToggler => !hamburgerToggler)
   }
 
+  let ogData = {...props.categoryData}
+  let ogCoverDoc = {...ogData.coverDocument}.source
+
+
   return (
     <>
       <Head>
         <title>پیشه پلاس | {rgxedTitle}</title>
-        <meta name="description" content="سایت رسمی پیشه یار" />
+        <meta name="description" content="سایت رسمی پیشه پلاس" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={ogCoverDoc} />
+        <meta property="og:title" content={rgxedTitle} />
+        <meta property="og:description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       

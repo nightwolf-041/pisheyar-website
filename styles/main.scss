@@ -36,7 +36,6 @@ a:hover {
     height: 29rem;
 }
 
-
 .swiper-pagination-application {
     display: flex;
     justify-content: center;
@@ -137,15 +136,15 @@ a:hover {
     }
 }
 
-@media (max-width: 400px) {
-    .sliderContainer {
-        width: 100%;
-    }
-    .slick-slider{
-        width: 140%;
-        margin-left: -17%;
-    }
-}
+// @media (max-width: 400px) {
+//     .sliderContainer {
+//         width: 100%;
+//     }
+//     .slick-slider{
+//         width: 140%;
+//         margin-left: -17%;
+//     }
+// }
 
 @media (min-width: 1400px) {
     .sliderContainer {

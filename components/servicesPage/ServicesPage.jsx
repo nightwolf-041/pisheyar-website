@@ -8,7 +8,7 @@ import classes from './servicesPage.module.scss'
 const ServicesPage = () => {
 
     const [swiper, updateSwiper] = useState(null);
-    const [bottomSliderGuid, setBottomSliderGuid] = useState(null);
+    const [bottomSliderGuid, setBottomSliderGuid] = useState('e3b1e3a1-4d79-454d-8b1f-6c9e24e290b2');
     const [dataForBottom, setdDtaForBottom] = useState([]);
     const [dataForPage2, setdDtaForPage2] = useState(null);
 
@@ -21,6 +21,7 @@ const ServicesPage = () => {
     }, [])
 
     const sendGuidToBottomSlider = guid => {
+      console.log(guid)
       setBottomSliderGuid(guid)
       axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=${guid}`)
       .then(res => {
@@ -62,6 +63,7 @@ const ServicesPage = () => {
                     </p>
                 </div>
                 <TopSlider
+                bottomSliderGuid={bottomSliderGuid}
                 sendGuidToBottomSlider={guid => sendGuidToBottomSlider(guid)} />
                 <BottomSlider
                 dataForBottom={dataForBottom}
