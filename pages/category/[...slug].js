@@ -26,7 +26,6 @@ const page2 = (props) => {
   let ogData = {...props.categoryData}
   let ogCoverDoc = {...ogData.coverDocument}.source
 
-
   return (
     <>
       <Head>

@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import axios from 'axios'
 import { TimelineMax, TweenMax, Bounce, Elastic } from "gsap";
 import MenuPageSearch from './MenuPageSearch'
 import classes from './menuPage.module.scss'
@@ -12,6 +13,8 @@ class MenuPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            centerBoxes: [],
+            icons: [],
             deg: 0,
             toggleOnce: true
         }
@@ -71,6 +74,14 @@ class MenuPage extends Component {
     }
 
     componentDidMount() {
+
+        axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=c265fd02-0194-4d38-83e8-a93bc3698fcc`)
+        .then(res => {
+            console.log(res.data);
+            this.setState({
+                centerBoxes: res.data.primaryCategories
+            })
+        })
 
         this.centerBox1Tween = TweenMax.to(this.centerBox1, 0.3, {display: 'flex', autoAlpha: 1});
         this.centerBox2Tween = TweenMax.to(this.centerBox2, 0.3, {display: 'none', autoAlpha: 0});
@@ -500,49 +511,142 @@ class MenuPage extends Component {
         this.circleMenuItemIconbox7Tween = TweenMax.to(this.circleMenuItemIconbox7, 0.3, {backgroundColor: '#0b1033'})
     }
 
+    centerBoxDocGenerator = box => {
+        const centerBox1Doc = {...box.quadMenuDocument}
+        return centerBox1Doc.source
+    }
+
 
     render() {
+
+        const centerBox1Destructure  = {...this.state.centerBoxes[0]}
+        const centerBox1Doc = {...centerBox1Destructure.quadMenuDocument}
+        const centerBox1IconDoc = {...centerBox1Destructure.inactiveIconDocument}
+        const centerBox1Title = centerBox1Destructure.title
+
+        const centerBox2Destructure  = {...this.state.centerBoxes[1]}
+        const centerBox2Doc = {...centerBox2Destructure.quadMenuDocument}
+        const centerBox2IconDoc = {...centerBox2Destructure.inactiveIconDocument}
+        const centerBox2Title = centerBox2Destructure.title
+
+        const centerBox3Destructure  = {...this.state.centerBoxes[2]}
+        const centerBox3Doc = {...centerBox3Destructure.quadMenuDocument}
+        const centerBox3IconDoc = {...centerBox3Destructure.inactiveIconDocument}
+        const centerBox3Title = centerBox3Destructure.title
+
+        const centerBox4Destructure  = {...this.state.centerBoxes[3]}
+        const centerBox4Doc = {...centerBox4Destructure.quadMenuDocument}
+        const centerBox4IconDoc = {...centerBox4Destructure.inactiveIconDocument}
+        const centerBox4Title = centerBox4Destructure.title
+
+        const centerBox5Destructure  = {...this.state.centerBoxes[4]}
+        const centerBox5Doc = {...centerBox5Destructure.quadMenuDocument}
+        const centerBox5IconDoc = {...centerBox5Destructure.inactiveIconDocument}
+        const centerBox5Title = centerBox5Destructure.title
+
+        const centerBox6Destructure  = {...this.state.centerBoxes[5]}
+        const centerBox6Doc = {...centerBox6Destructure.quadMenuDocument}
+        const centerBox6IconDoc = {...centerBox6Destructure.inactiveIconDocument}
+        const centerBox6Title = centerBox6Destructure.title
+
+        const centerBox7Destructure  = {...this.state.centerBoxes[6]}
+        const centerBox7Doc = {...centerBox7Destructure.quadMenuDocument}
+        const centerBox7IconDoc = {...centerBox7Destructure.inactiveIconDocument}
+        const centerBox7Title = centerBox7Destructure.title
+
+        const centerBox8Destructure  = {...this.state.centerBoxes[7]}
+        const centerBox8Doc = {...centerBox8Destructure.quadMenuDocument}
+        const centerBox8IconDoc = {...centerBox8Destructure.inactiveIconDocument}
+        const centerBox8Title = centerBox8Destructure.title
+
         return(
             <section name="categoryPage" className={classes.menuPageSection}>
 
                 <MenuPageSearch />
 
+                {/* {this.state.centerBoxes.map((box, index) => (
+                    <div id={`centerBox${index+1}`} className={[classes.circleMenuMainCenterBox, `classes.circleMenuMainCenterBox${index+1}`].join(' ')}
+                    ref={div => this.centerBox[index+1] = div}>
+                        <img src={this.centerBoxDocGenerator(box)} alt=""
+                        className={classes.circleMenuMainCenterBoxImage}/>
+                        <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                        <div className={classes.circleMenuMainCenterBoxText}>
+                            {box.title}
+                        </div>
+                    </div>
+                ))} */}
+
                 <div id="centerBox1" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox1].join(' ')}
                 ref={div => this.centerBox1 = div}>
-                    <img src="/manufacturing01.jpg" alt=""
+                    <img src={centerBox1Doc.source} alt=""
                     className={classes.circleMenuMainCenterBoxImage}/>
                     <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
                     <div className={classes.circleMenuMainCenterBoxText}>
-                        خدماتی شامل هاواور هاوار و پلاستیک
+                        {centerBox1Title}
                     </div>
                 </div>
                 <div id="centerBox2" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox2].join(' ')}
                 ref={div => this.centerBox2 = div}>
-                     
+                     <img src={centerBox2Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox2Title}
+                    </div>
                 </div>
                 <div id="centerBox3" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox3].join(' ')}
                 ref={div => this.centerBox3 = div}>
-                    
+                    <img src={centerBox3Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox3Title}
+                    </div>
                 </div>
                 <div id="centerBox4" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox4].join(' ')}
                 ref={div => this.centerBox4 = div}>
-                    
+                    <img src={centerBox4Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox4Title}
+                    </div>
                 </div>
                 <div id="centerBox5" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox5].join(' ')}
                 ref={div => this.centerBox5 = div}>
-                    
+                    <img src={centerBox5Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox5Title}
+                    </div>
                 </div>
                 <div id="centerBox6" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox6].join(' ')}
                 ref={div => this.centerBox6 = div}>
-                    
+                    <img src={centerBox6Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox6Title}
+                    </div>
                 </div>
                 <div id="centerBox7" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox7].join(' ')}
                 ref={div => this.centerBox7 = div}>
-                    
+                    <img src={centerBox7Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox7Title}
+                    </div>
                 </div>
                 <div id="centerBox8" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox8].join(' ')}
                 ref={div => this.centerBox8 = div}>
-                    
+                    <img src={centerBox8Doc.source} alt=""
+                    className={classes.circleMenuMainCenterBoxImage}/>
+                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                    <div className={classes.circleMenuMainCenterBoxText}>
+                        {centerBox8Title}
+                    </div>
                 </div>
 
                 <div id="circleMenuMain" className={classes.circleMenuMain} ref={div => this.circleMenuMain = div}>
@@ -550,56 +654,56 @@ class MenuPage extends Component {
                     <div id="circleMenuItem1" className={classes.circleMenuItem1} >
                         <div className={[classes.circleMenuItemIconbox, classes.circleMenuItemIconbox1].join(' ')} ref={div => this.circleMenuItemIconbox1 = div}
                         onClick={() => this.handleTurn1()}>
-                            <img src="/menuCtg-1.svg" alt=""
+                            <img src={centerBox1IconDoc.source} alt=""
                             className={classes.circleMenuItemIconbox1Image} />
                         </div>
                     </div>
                     <div id="circleMenuItem2" className={classes.circleMenuItem2} >
                         <div className={classes.circleMenuItemIconbox}ref={div => this.circleMenuItemIconbox2 = div}
                         onClick={() => this.handleTurn2()}>
-                            <img src="/menuCtg-2.svg" alt=""
+                            <img src={centerBox2IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>
                     <div id="circleMenuItem3" className={classes.circleMenuItem3}>
                         <div className={classes.circleMenuItemIconbox} ref={div => this.circleMenuItemIconbox3 = div}
                         onClick={() => this.handleTurn3()}>
-                        <img src="/menuCtg-3.svg" alt=""
+                        <img src={centerBox3IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>
                     <div id="circleMenuItem4" className={classes.circleMenuItem4}>
                         <div className={classes.circleMenuItemIconbox} ref={div => this.circleMenuItemIconbox4 = div}
                         onClick={() => this.handleTurn4()}>
-                        <img src="/menuCtg-4.svg" alt=""
+                        <img src={centerBox4IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>
                     <div id="circleMenuItem5" className={classes.circleMenuItem5}>
                         <div className={classes.circleMenuItemIconbox} ref={div => this.circleMenuItemIconbox5 = div}
                         onClick={() => this.handleTurn5()}>
-                            <img src="/menuCtg-5.svg" alt=""
+                            <img src={centerBox5IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>
                     <div id="circleMenuItem6" className={classes.circleMenuItem6}>
                         <div className={classes.circleMenuItemIconbox} ref={div => this.circleMenuItemIconbox6 = div}
                         onClick={() => this.handleTurn6()}>
-                        <img src="/menuCtg-6.svg" alt=""
+                        <img src={centerBox6IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>
                     <div id="circleMenuItem7" className={classes.circleMenuItem7}>
                         <div className={classes.circleMenuItemIconbox} ref={div => this.circleMenuItemIconbox7 = div}
                         onClick={() => this.handleTurn7()}>
-                        <img src="/menuCtg-7.svg" alt=""
+                        <img src={centerBox7IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>
                     <div id="circleMenuItem8" className={classes.circleMenuItem8}>
                         <div className={classes.circleMenuItemIconbox} ref={div => this.circleMenuItemIconbox8 = div}
                         onClick={() => this.handleTurn8()}>
-                        <img src="/menuCtg-8.svg" alt=""
+                        <img src={centerBox8IconDoc.source} alt=""
                             className={classes.circleMenuItemIconboxImage} />
                         </div>
                     </div>

@@ -8,6 +8,7 @@ const C = CSSPlugin;
 const Page2TopPage = (props) => {
     const imageRight = useRef()
     const titleLeft = useRef()
+    console.log(props.categoryInfo)
 
     useEffect(() => {
         TweenMax.to(imageRight.current, 1, {
@@ -30,10 +31,10 @@ const Page2TopPage = (props) => {
 
     return(
         <section className={classes.page2TopPage}>
-            <img src={background} alt=""
+            <img src={background} alt="category background"
             className={classes.page2TopPageImage} />
             <div className={classes.page2TopPageBackdrop}></div>
-            <img src={secondCover} alt=""
+            <img src={secondCover} alt="category image"
             ref={element => {imageRight.current = element}}
             className={classes.page2TopPageManShape} />
             <div className={classes.page2TopPageTitleBox}>
