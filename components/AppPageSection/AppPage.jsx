@@ -9,12 +9,13 @@ const AppPageSection = () => {
     let [currentIndex, setCurrentIndex] = useState()
 
     useEffect(() => {
-        let mySwiper = document.querySelector('.app-swiper-containerinitialized').swiper;
+        let mySwiper = document.querySelector('.appPage-swiper-container').swiper;
         setCurrentIndex(mySwiper.activeIndex)
-    })
+    }, [])
 
     const params = {
         containerModifierClass: 'app-swiper-container',
+        containerClass: 'appPage-swiper-container',
         pagination: {
           el: '.swiper-pagination-application',
           clickable: true
@@ -23,11 +24,15 @@ const AppPageSection = () => {
         grabCursor: true,
         slidesPerView: 1,
         spaceBetween: 0,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
         // getSwiper: (sw) => alert(sw),
         // renderPagination: (sw) => console.log(sw)
         on: {
             slideChange: () => {
-                let mySwiper = document.querySelector('.swiper-container').swiper;
+                let mySwiper = document.querySelector('.appPage-swiper-container').swiper;
                 setCurrentIndex(mySwiper.activeIndex)
             }
         }
@@ -66,11 +71,18 @@ const AppPageSection = () => {
                 </div>
                 <div className={classes.appPageRight}>
                     <h4 className={classes.appPageRightTitle}><b>اپلیکیشن</b> پیشه پلاس</h4>
-                    <h5 className={classes.appPageRightSubtitle}>
+                    {/* <h5 className={classes.appPageRightSubtitle}>
                         دو اپلیکیشن جدا با امکانات مجزا از هم
-                    </h5>
-                    <p className={classes.appPageRightDesc}>
+                    </h5> */}
+                    {/* <p className={classes.appPageRightDesc}>
                         خدمات پیشه پلاس یکی از برترین خدمات صنعتی شناخته شده که به شما کمک می کند از متنوع ترین خدمات صنعتی مطلعو در صورت نیاز با مراجعه به دسته بندی خدمات مورد نیاز را پیدا کنید.
+                    </p> */}
+                    <p className={classes.appPageRightDesc}>
+                    {currentIndex === 0 ?
+                        'با نصب اپلیکیشن پیشه پلاس به سهولت با متخصصین مجرب  درهر ضمینه صنعتی گفتگو کنید و بهترین خدمات را از آنها بخواهید.'
+                        :
+                        'با نصب اپلیکیشن ویژه متخصصین پیشه پلاس کسب و کار خود را  گسترش دهید.'
+                    }
                     </p>
                     <div className={classes.appPageRightSocialbox}>
                         <a href={currentIndex === 0 ? "googleplay" : "gooooooogleplay"}

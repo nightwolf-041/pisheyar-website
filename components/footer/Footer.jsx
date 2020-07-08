@@ -91,7 +91,7 @@ const Footer = (props) => {
                                 <>
                                 <Link activeClass={classes.activeLink} to="aboutUsPage" spy={true}
                                 smooth={true} duration={500} className={classes.footerLinksboxLink}>
-                                    درباره پیشه یار
+                                    درباره پیشه پلاس
                                 </Link>
                                 <Link activeClass={classes.activeLink} to="servicesPage" spy={true}
                                 smooth={true} duration={500} className={classes.footerLinksboxLink}>

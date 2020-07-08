@@ -161,6 +161,10 @@ function BottomSlider(props) {
         //     nextEl: '.swiper-bottomSlider-next',
         //     prevEl: '.swiper-bottomSlider-prev'
         // },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
         breakpoints: {
             400: {
                 centeredSlides: true,
