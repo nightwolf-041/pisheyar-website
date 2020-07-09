@@ -41,6 +41,12 @@ a:hover {
 }
 
 .swiper-pagination-application {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

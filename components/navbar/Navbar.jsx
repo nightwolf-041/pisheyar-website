@@ -28,7 +28,7 @@ const Navbar = (props) => {
             </div>
             <div className={classes.navbarContainer}>
                 <div className={classes.navbarLinks}>
-                    <a href="#" className={classes.navbarLogonLink}>ثبت نام . ورود</a>
+                    <a href="http://panel.pisheplus.com/login" className={classes.navbarLogonLink}>ثبت نام . ورود</a>
                     <Link activeClass={classes.activeLink} to="topPage" spy={true}
                     smooth={true} duration={500} className={classes.navbarSmoothLink}>
                         خانه

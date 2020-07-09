@@ -89,9 +89,11 @@ function TopSlider(props) {
                                         {ctg.title}
                                     </h6>
                                     {showActive !== ctg.categoryGuid && ctg.categoryGuid !== props.bottomSliderGuid ?
-                                        <img src={activeIconGenerator(ctg)} alt="" className={[classes.servicesPageSliderTopInAndActiveIconActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} /> :
-
-                                        <img src={inActiveIconGenerator(ctg)} alt="" className={[classes.servicesPageSliderTopInAndActiveIconInActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} />
+                                        <img src={inActiveIconGenerator(ctg)} alt=""
+                                        className={[classes.servicesPageSliderTopInAndActiveIconInActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} />
+                                        :
+                                        <img src={activeIconGenerator(ctg)} alt=""
+                                        className={[classes.servicesPageSliderTopInAndActiveIconActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} />  
                                     }
                                 </div>
                             ))
@@ -133,9 +135,11 @@ function TopSlider(props) {
                                 {ctg.title}
                             </h6>
                             {showActive !== ctg.categoryGuid && ctg.categoryGuid !== props.bottomSliderGuid ?
-                                <img src={activeIconGenerator(ctg)} alt="" className={[classes.servicesPageSliderTopInAndActiveIconActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} /> :
-
-                                <img src={inActiveIconGenerator(ctg)} alt="" className={[classes.servicesPageSliderTopInAndActiveIconInActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} />
+                                <img src={inActiveIconGenerator(ctg)} alt=""
+                                className={[classes.servicesPageSliderTopInAndActiveIconInActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} />
+                                :
+                                <img src={activeIconGenerator(ctg)} alt=""
+                                className={[classes.servicesPageSliderTopInAndActiveIconActive, classes.servicesPageSliderTopInAndActiveIcon].join(' ')} />  
                             }
                         </div>
                     ))
