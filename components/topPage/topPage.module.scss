@@ -3,7 +3,12 @@
     position: relative;
     width: 100%;
     height: 56rem;
+    // background-color: #f2f2f2;
     background-color: #f2f2f2;
+    background-image: url('../../public/WideBackgroundMenupage.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden !important;
 }
 

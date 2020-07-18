@@ -2,7 +2,7 @@
 .menuPageSection {
     position: relative;
     width: 100%;
-    height: 42rem;
+    height: 49rem;
     background-color: #f2f2f2;
     background-image: url('../../public/WideBackgroundMenupage.svg');
     background-position: center;
@@ -12,11 +12,11 @@
 }
 
 .circleMenuMainCenterBoxStart {
-    width: 12rem;
-    height: 12rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 19.4rem;
-    left: calc(50% - 6rem);
+    top: 19rem;
+    left: calc(50% - 9rem);
     transform: rotate(0deg);
     background-color: #ccc;
     border-radius: 100%;
@@ -32,11 +32,11 @@
 }
 
 .circleMenuMainCenterBox {
-    width: 12rem;
-    height: 12rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 19.4rem;
-    left: calc(50% - 6rem);
+    top: 19rem;
+    left: calc(50% - 9rem);
     transform: rotate(0deg);
     border-radius: 100%;
     z-index: 20;
@@ -172,91 +172,91 @@
 .circleMenuMain {
     position: relative;
     top: 14rem;
-    width: 23rem;
-    height: 23rem;
+    width: 28rem;
+    height: 28rem;
     margin: 0 auto;
     border: 1px solid #0b1033;
     border-radius: 100%;
 }
 
 .circleMenuItem1 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(0deg);
 }
 
 .circleMenuItem2 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(45deg);
 }
 
 .circleMenuItem3 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(90deg);
 }
 
 .circleMenuItem4 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(135deg);
 }
 
 .circleMenuItem5 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(180deg);
 }
 
 .circleMenuItem6 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(225deg);
 }
 
 .circleMenuItem7 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(270deg);
 }
 
 .circleMenuItem8 {
-    width: 13rem;
-    height: 13rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
-    top: 5rem;
-    left: 5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 9rem);
     transform: rotate(315deg);
 }
 
 .circleMenuItemIconbox {
     position: absolute;
     top: -6.7rem;
-    left: calc(50% - 1.7rem);
-    width: 3.6rem;
-    height: 3.6rem;
+    left: calc(50% - 2rem);
+    width: 4rem;
+    height: 4rem;
     background-color: #0b1033;
     border-radius: 100%;
     display: flex;
@@ -611,9 +611,95 @@
     margin-left: -3rem;
 }
 
+@media screen and (max-width: 700px) {
+    .menuPageSection {
+        height: 44rem;
+    }
+    .circleMenuMainCenterBoxStart {
+        width: 12rem;
+        height: 12rem;
+        top: 19.4rem;
+        left: calc(50% - 6rem);
+    }
+    .circleMenuMainCenterBox {
+        width: 12rem;
+        height: 12rem;
+        top: 19.4rem;
+        left: calc(50% - 6rem);
+    }
+    .circleMenuMain {
+        top: 14rem;
+        width: 23rem;
+        height: 23rem;
+    }
+
+    .circleMenuItem1 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem2 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem3 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem4 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem5 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem6 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem7 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItem8 {
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .circleMenuItemIconbox {
+        top: -6.7rem;
+        left: calc(50% - 1.7rem);
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .menuPageSection {
-        height: 37rem;
+        height: 39rem;
     }
     .circleMenuMain {
         position: relative;

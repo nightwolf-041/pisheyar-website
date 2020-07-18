@@ -1,9 +1,9 @@
 
 import React, {Component} from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { Scrollbar  } from 'react-scrollbars-custom'
 import { TweenMax } from "gsap";
 import {CSSPlugin} from 'gsap';
+import OrderCreateModal from '../UI/orderCreateModal/OrderCreateModal'
 
 import Select from 'react-select';
 import axios from 'axios';
@@ -32,7 +32,11 @@ class MenuPageSearch extends Component {
 
             serachResultCategories: null,
             serachResultLoading: false,
-            serachResultMessage: ''
+            serachResultMessage: '',
+
+            orderCreateModalHidden: true,
+            resultCategoryGuid: null,
+            resultCategoryLabel: null,
         }
 
 		this.searchRow = null;
@@ -45,6 +49,19 @@ class MenuPageSearch extends Component {
         this.searchResultBoxTween = null;
     }
 
+    hideOrderCreateModal = () => {
+        this.setState({
+            orderCreateModalHidden: true,
+        })
+    }
+
+    // componentWillUpdate = () => {
+    //     this.hideOrderCreateModal = () => {
+    //         this.setState({
+    //             orderCreateModalHidden: true,
+    //         })
+    //     }
+    // }
 
     componentDidMount(){
 
@@ -54,7 +71,7 @@ class MenuPageSearch extends Component {
         this.setState({toggleMobile: !toggleMobile})
 
     // countries
-        axios.get('http://185.94.97.164/api/Account/Provinces')
+        axios.get('http://185.211.59.237/Account/Provinces')
         .then(res => {
             console.log(res.data.provinces);
             this.setState({
@@ -75,7 +92,7 @@ class MenuPageSearch extends Component {
             this.setState({cityDisabled: false, citiesLoading: true})
              // cities 
             let guid = val.provinceGuid
-            axios.get(`http://185.94.97.164/api/Account/Provinces/${guid}/Cities`).then(res => {
+            axios.get(`http://185.211.59.237/Account/Provinces/${guid}/Cities`).then(res => {
                 console.log(res.data);
                 this.setState({
                     cities: res.data.cities,
@@ -117,7 +134,7 @@ class MenuPageSearch extends Component {
         let searchInput = e.target.value.trim()
 
         axios.get(
-            `http://185.94.97.164/api/Category/SearchByCity?cityGuid=${this.state.selectedCity.cityGuid}&searchInput=${searchInput}`,
+            `http://185.211.59.237/Category/SearchByCity?cityGuid=${this.state.selectedCity.cityGuid}&searchInput=${searchInput}`,
           ).then((res) => {
             console.log(res);
             if(res.data.state === 1) {
@@ -137,6 +154,20 @@ class MenuPageSearch extends Component {
             }
           });
     }
+
+    setResultCategoryGuidHandler = (guid, label) => {
+        this.setState({
+            orderCreateModalHidden: false,
+            resultCategoryGuid: guid,
+            resultCategoryLabel: label,
+        })
+    }
+
+    // hideOrderCreateModal = () => {
+    //     this.setState({
+    //         orderCreateModalHidden: true,
+    //     })
+    // }
 
       render(){
 
@@ -235,7 +266,8 @@ class MenuPageSearch extends Component {
                         <PerfectScrollbar>
                                     
                             {this.state.serachResultCategories.map((ctg, index) => (
-                                <div className={classes.menuPageSearchResultItembox} key={index}>
+                                <div className={classes.menuPageSearchResultItembox} key={index}
+                                onClick={() => this.setResultCategoryGuidHandler(ctg.categoryGuid, ctg.displayName)}>
                                     <h2 className={classes.menuPageSearchResultItem}>
                                         {ctg.displayName}
                                     </h2>
@@ -292,6 +324,12 @@ class MenuPageSearch extends Component {
                         onClick={this.animateTogglerMobile} />
                     </div>
                 </div>
+
+                <OrderCreateModal
+                hidden={this.state.orderCreateModalHidden}
+                orderCreateModalLabel={this.state.resultCategoryLabel}
+                hideOrderCreateModal={this.hideOrderCreateModal}
+                />
             </>
         )
       }

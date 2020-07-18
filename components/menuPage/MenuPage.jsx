@@ -139,7 +139,7 @@ class MenuPage extends Component {
 
     componentDidMount() {
 
-        axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=c265fd02-0194-4d38-83e8-a93bc3698fcc`)
+        axios.get(`http://185.211.59.237/Category/GetPrimaries?guid=c265fd02-0194-4d38-83e8-a93bc3698fcc`)
         .then(res => {
             console.log(res.data);
 
@@ -240,6 +240,8 @@ class MenuPage extends Component {
                 centerBox8InActiveIconDoc,
                 centerBox8Title,
             })
+        }).catch(err => {
+            console.log(err)
         })
 
         this.centerBox1Tween = TweenMax.to(this.centerBox1, 0.3, {display: 'flex', autoAlpha: 1});
@@ -250,8 +252,7 @@ class MenuPage extends Component {
         this.centerBox6Tween = TweenMax.to(this.centerBox6, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
-//         circleMenuItemIconbox1Image
-// circleMenuItemIconbox1ImageTween
+
         this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1InActiveIconDoc.source}});
         this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
         this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
@@ -560,6 +561,17 @@ class MenuPage extends Component {
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
 
+         this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
+
+
         this.circleMenuItemIconbox1Tween = TweenMax.to(this.circleMenuItemIconbox1, 0.3, {backgroundColor: '#ffd617'})
 
         this.circleMenuItemIconbox2Tween = TweenMax.to(this.circleMenuItemIconbox2, 0.3, {backgroundColor: '#0b1033'})
@@ -595,6 +607,16 @@ class MenuPage extends Component {
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
 
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
+
         this.circleMenuItemIconbox2Tween = TweenMax.to(this.circleMenuItemIconbox2, 0.3, {backgroundColor: '#ffd617'})
 
         this.circleMenuItemIconbox1Tween = TweenMax.to(this.circleMenuItemIconbox1, 0.3, {backgroundColor: '#0b1033'})
@@ -621,6 +643,16 @@ class MenuPage extends Component {
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
 
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
+
         this.circleMenuItemIconbox3Tween = TweenMax.to(this.circleMenuItemIconbox3, 0.3, {backgroundColor: '#ffd617'})
 
         this.circleMenuItemIconbox1Tween = TweenMax.to(this.circleMenuItemIconbox1, 0.3, {backgroundColor: '#0b1033'})
@@ -645,6 +677,16 @@ class MenuPage extends Component {
         this.centerBox6Tween = TweenMax.to(this.centerBox6, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
+
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
 
         this.circleMenuItemIconbox4Tween = TweenMax.to(this.circleMenuItemIconbox4, 0.3, {backgroundColor: '#ffd617'})
 
@@ -672,6 +714,16 @@ class MenuPage extends Component {
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
 
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
+
         this.circleMenuItemIconbox5Tween = TweenMax.to(this.circleMenuItemIconbox5, 0.3, {backgroundColor: '#ffd617'})
 
         this.circleMenuItemIconbox1Tween = TweenMax.to(this.circleMenuItemIconbox1, 0.3, {backgroundColor: '#0b1033'})
@@ -697,6 +749,16 @@ class MenuPage extends Component {
         this.centerBox5Tween = TweenMax.to(this.centerBox5, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
+
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
 
         this.circleMenuItemIconbox6Tween = TweenMax.to(this.circleMenuItemIconbox6, 0.3, {backgroundColor: '#ffd617'})
 
@@ -724,6 +786,16 @@ class MenuPage extends Component {
         this.centerBox6Tween = TweenMax.to(this.centerBox6, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox8Tween = TweenMax.to(this.centerBox8, 0.3, {display: 'none', autoAlpha: 0});
 
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8ActiveIconDoc.source}});
+
         this.circleMenuItemIconbox7Tween = TweenMax.to(this.circleMenuItemIconbox7, 0.3, {backgroundColor: '#ffd617'})
 
         this.circleMenuItemIconbox1Tween = TweenMax.to(this.circleMenuItemIconbox1, 0.3, {backgroundColor: '#0b1033'})
@@ -749,6 +821,16 @@ class MenuPage extends Component {
         this.centerBox6Tween = TweenMax.to(this.centerBox6, 0.3, {display: 'none', autoAlpha: 0});
         this.centerBox7Tween = TweenMax.to(this.centerBox7, 0.3, {display: 'none', autoAlpha: 0});
 
+        this.circleMenuItemIconbox8ImageTween = TweenMax.set(this.circleMenuItemIconbox8Image, {attr: {src: this.state.centerBox8InActiveIconDoc.source}});
+
+        this.circleMenuItemIconbox1ImageTween = TweenMax.set(this.circleMenuItemIconbox1Image, {attr: {src: this.state.centerBox1ActiveIconDoc.source}});
+        this.circleMenuItemIconbox2ImageTween = TweenMax.set(this.circleMenuItemIconbox2Image, {attr: {src: this.state.centerBox2ActiveIconDoc.source}});
+        this.circleMenuItemIconbox3ImageTween = TweenMax.set(this.circleMenuItemIconbox3Image, {attr: {src: this.state.centerBox3ActiveIconDoc.source}});
+        this.circleMenuItemIconbox4ImageTween = TweenMax.set(this.circleMenuItemIconbox4Image, {attr: {src: this.state.centerBox4ActiveIconDoc.source}});
+        this.circleMenuItemIconbox5ImageTween = TweenMax.set(this.circleMenuItemIconbox5Image, {attr: {src: this.state.centerBox5ActiveIconDoc.source}});
+        this.circleMenuItemIconbox6ImageTween = TweenMax.set(this.circleMenuItemIconbox6Image, {attr: {src: this.state.centerBox6ActiveIconDoc.source}});
+        this.circleMenuItemIconbox7ImageTween = TweenMax.set(this.circleMenuItemIconbox7Image, {attr: {src: this.state.centerBox7ActiveIconDoc.source}});
+
         this.circleMenuItemIconbox8Tween = TweenMax.to(this.circleMenuItemIconbox8, 0.3, {backgroundColor: '#ffd617'})
 
         this.circleMenuItemIconbox1Tween = TweenMax.to(this.circleMenuItemIconbox1, 0.3, {backgroundColor: '#0b1033'})
@@ -768,67 +850,10 @@ class MenuPage extends Component {
 
     render() {
 
-        // centerBox1Doc,
-        //         centerBox1ActiveIconDoc,
-        //         centerBox1InActiveIconDoc,
-        //         centerBox1Title,
-
-        // const centerBox1Destructure  = {...this.state.centerBoxes[0]}
-        // const centerBox1Doc = {...centerBox1Destructure.quadMenuDocument}
-        // const centerBox1IconDoc = {...centerBox1Destructure.inactiveIconDocument}
-        // const centerBox1Title = centerBox1Destructure.title
-
-        // const centerBox2Destructure  = {...this.state.centerBoxes[1]}
-        // const centerBox2Doc = {...centerBox2Destructure.quadMenuDocument}
-        // const centerBox2IconDoc = {...centerBox2Destructure.inactiveIconDocument}
-        // const centerBox2Title = centerBox2Destructure.title
-
-        // const centerBox3Destructure  = {...this.state.centerBoxes[2]}
-        // const centerBox3Doc = {...centerBox3Destructure.quadMenuDocument}
-        // const centerBox3IconDoc = {...centerBox3Destructure.inactiveIconDocument}
-        // const centerBox3Title = centerBox3Destructure.title
-
-        // const centerBox4Destructure  = {...this.state.centerBoxes[3]}
-        // const centerBox4Doc = {...centerBox4Destructure.quadMenuDocument}
-        // const centerBox4IconDoc = {...centerBox4Destructure.inactiveIconDocument}
-        // const centerBox4Title = centerBox4Destructure.title
-
-        // const centerBox5Destructure  = {...this.state.centerBoxes[4]}
-        // const centerBox5Doc = {...centerBox5Destructure.quadMenuDocument}
-        // const centerBox5IconDoc = {...centerBox5Destructure.inactiveIconDocument}
-        // const centerBox5Title = centerBox5Destructure.title
-
-        // const centerBox6Destructure  = {...this.state.centerBoxes[5]}
-        // const centerBox6Doc = {...centerBox6Destructure.quadMenuDocument}
-        // const centerBox6IconDoc = {...centerBox6Destructure.inactiveIconDocument}
-        // const centerBox6Title = centerBox6Destructure.title
-
-        // const centerBox7Destructure  = {...this.state.centerBoxes[6]}
-        // const centerBox7Doc = {...centerBox7Destructure.quadMenuDocument}
-        // const centerBox7IconDoc = {...centerBox7Destructure.inactiveIconDocument}
-        // const centerBox7Title = centerBox7Destructure.title
-
-        // const centerBox8Destructure  = {...this.state.centerBoxes[7]}
-        // const centerBox8Doc = {...centerBox8Destructure.quadMenuDocument}
-        // const centerBox8IconDoc = {...centerBox8Destructure.inactiveIconDocument}
-        // const centerBox8Title = centerBox8Destructure.title
-
         return(
             <section name="categoryPage" className={classes.menuPageSection}>
 
                 <MenuPageSearch />
-
-                {/* {this.state.centerBoxes.map((box, index) => (
-                    <div id={`centerBox${index+1}`} className={[classes.circleMenuMainCenterBox, `classes.circleMenuMainCenterBox${index+1}`].join(' ')}
-                    ref={div => this.centerBox[index+1] = div}>
-                        <img src={this.centerBoxDocGenerator(box)} alt=""
-                        className={classes.circleMenuMainCenterBoxImage}/>
-                        <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
-                        <div className={classes.circleMenuMainCenterBoxText}>
-                            {box.title}
-                        </div>
-                    </div>
-                ))} */}
 
                 <div id="centerBox1" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox1].join(' ')}
                 ref={div => this.centerBox1 = div}>

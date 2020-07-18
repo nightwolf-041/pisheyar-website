@@ -1,17 +1,29 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentDollar, faUserClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faComments } from "@fortawesome/free-regular-svg-icons";
 import classes from './blogPage.module.scss'
 
 
 const BlogPage = () => {
+
+    let [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        axios.get('http://185.211.59.237/Post/GetIndexesAnonymous')
+        .then(res => {
+            console.log(res.data.posts)
+            setPosts(res.data.posts)
+        })
+    }, [])
+
     return (
         <section name="blogPage" className={classes.blogPageSection}>
             <div className="container">
                 <div className={classes.blogPageTitlebox}>
                     <h4 className={classes.blogPageTitle}>بلاگ ما</h4>
                     <p className={classes.blogPageDesc}>
-                        آخرین اخبار صنعتی را در بلاگ پیشه یار دنبال کنید؛ شما می توانید با وارد شدن به بلاگ پیشه یار از اخبار به رور صنعتی با خبر شوید
+                        آخرین اخبار صنعتی را در بلاگ پیشه پلاس دنبال کنید؛ شما می توانید با وارد شدن به بلاگ پیشه پلاس از اخبار به رور صنعتی با خبر شوید
                     </p>
                 </div>
                 <div className={classes.blogPagePostsbox}>
@@ -21,15 +33,13 @@ const BlogPage = () => {
                         </div>
                         <div className={classes.blogPagePostInfobox}>
                             <div className={classes.blogPagePostDatebox}>
-                                <FontAwesomeIcon icon={faUserClock}
-                                 className={classes.blogPagePostDateIcon} />
+                                <FontAwesomeIcon icon={faClock}
+                                  className={classes.blogPagePostDateIcon} />
                                 <span className={classes.blogPagePostDateSpan}>22 دی</span>
                             </div>
                             <div className={classes.blogPagePostCommentsbox}>
-                                <FontAwesomeIcon icon={faUserClock}
-                                className={classes.blogPagePostDateIcon} />
-                            <img src="/home-icon.png" alt=""
-                                className={classes.blogPagePostCommentsIcon} />
+                                <FontAwesomeIcon icon={faComments}
+                                  className={classes.blogPagePostCommentsIcon} />
                                 <span className={classes.blogPagePostCommentsSpan}>2 نظر</span>
                             </div>
                         </div>
@@ -46,13 +56,13 @@ const BlogPage = () => {
                         </div>
                         <div className={classes.blogPagePostInfobox}>
                             <div className={classes.blogPagePostDatebox}>
-                                <img src="/home-icon.png" alt=""
-                                className={classes.blogPagePostDateIcon} />
+                                <FontAwesomeIcon icon={faClock}
+                                  className={classes.blogPagePostDateIcon} />
                                 <span className={classes.blogPagePostDateSpan}>22 دی</span>
                             </div>
                             <div className={classes.blogPagePostCommentsbox}>
-                            <img src="/home-icon.png" alt=""
-                                className={classes.blogPagePostCommentsIcon} />
+                                <FontAwesomeIcon icon={faComments}
+                                  className={classes.blogPagePostCommentsIcon} />
                                 <span className={classes.blogPagePostCommentsSpan}>2 نظر</span>
                             </div>
                         </div>
@@ -69,13 +79,13 @@ const BlogPage = () => {
                         </div>
                         <div className={classes.blogPagePostInfobox}>
                             <div className={classes.blogPagePostDatebox}>
-                                <img src="/home-icon.png" alt=""
-                                className={classes.blogPagePostDateIcon} />
+                                <FontAwesomeIcon icon={faClock}
+                                  className={classes.blogPagePostDateIcon} />
                                 <span className={classes.blogPagePostDateSpan}>22 دی</span>
                             </div>
                             <div className={classes.blogPagePostCommentsbox}>
-                            <img src="/home-icon.png" alt=""
-                                className={classes.blogPagePostCommentsIcon} />
+                                <FontAwesomeIcon icon={faComments}
+                                  className={classes.blogPagePostCommentsIcon} />
                                 <span className={classes.blogPagePostCommentsSpan}>2 نظر</span>
                             </div>
                         </div>

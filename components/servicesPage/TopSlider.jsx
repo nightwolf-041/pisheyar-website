@@ -1,7 +1,6 @@
 import React, {useRef} from 'react'
 import axios from 'axios'
 import Swiper from 'react-id-swiper';
-import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight, faToolbox } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,24 +16,22 @@ function TopSlider(props) {
     const [rebuild, setRebuild] = React.useState(true);
 
     React.useEffect(() => {
-        axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=c265fd02-0194-4d38-83e8-a93bc3698fcc`)
+        axios.get(`http://185.211.59.237/Category/GetPrimaries?guid=c265fd02-0194-4d38-83e8-a93bc3698fcc`)
         .then(res => {
             console.log(res.data.primaryCategories);
             setCategories(res.data.primaryCategories)
         })
     }, [])
 
-    const goNext = () => {
-        console.log('prev')
+    const goPrev = () => {
         if (ref.current !== null && ref.current.swiper !== null) {
-          ref.current.swiper.slideNext();
+          ref.current.swiper.slidePrev();
         }
       };
-    
-    const goPrev = () => {
-        console.log('next')
+      
+    const goNext = () => {
         if (ref.current !== null && ref.current.swiper !== null) {
-            ref.current.swiper.slidePrev();
+            ref.current.swiper.slideNext();
         }
     };
 
@@ -50,10 +47,11 @@ function TopSlider(props) {
 
     setTimeout(() => {
         setRebuild(false)
-    }, 1000);
+    }, 10);
 
     const params = {
         containerModifierClass: 'services-swiper-container',
+        // direction: 'vertical',
         loop: false,
         freeMode: false,
         grabCursor: false,
@@ -65,9 +63,9 @@ function TopSlider(props) {
 
     return (
         <>
-         {categories !== null && categories !== [] && categories.length > 5 ?
-            <div className={classes.servicesPageSliderTopContainer}>
-                <div className={classes.servicesPageSliderTop}>
+         {categories !== null && categories !== undefined && categories !== [] && categories.length > 5 ?
+            <div className={classes.servicesPageSliderTopContainer} dir="rtl">
+                <div className={classes.servicesPageSliderTop} >
                     <Swiper ref={ref} {...params}>
                         {
                         categories !== null && categories !== [] ?
@@ -102,14 +100,14 @@ function TopSlider(props) {
                     </Swiper>
                 </div>
                 <button className={classes.servicesPageSliderTopPrev}
-                onClick={goPrev}>
+                onClick={goNext}>
                     <FontAwesomeIcon icon={faAngleLeft}
                     className={classes.servicesPageSliderTopPrevIcon} />
                     <FontAwesomeIcon icon={faAngleLeft}
                     className={classes.servicesPageSliderTopPrevIcon2} />
                 </button>
                 <button className={classes.servicesPageSliderTopNext}
-                onClick={goNext}>
+                onClick={goPrev}>
                     <FontAwesomeIcon icon={faAngleRight}
                     className={classes.servicesPageSliderTopNextIcon} />
                     <FontAwesomeIcon icon={faAngleRight}
@@ -118,7 +116,7 @@ function TopSlider(props) {
             </div>
             :
             <div className={classes.servicesPageLessItemsBox}>
-                {categories !== null && categories !== [] ?
+                {categories !== null && categories !== [] && categories !== undefined ?
                     categories.map((ctg, index) => (
                         <div className={
                             ctg.categoryGuid !== props.bottomSliderGuid ?
@@ -143,7 +141,10 @@ function TopSlider(props) {
                             }
                         </div>
                     ))
-                    :null
+                    :
+                    <div className={classes.servicesPageEmptyMsg}>
+                        موردی یافت نشد
+                    </div>
                 }
             </div>
         }

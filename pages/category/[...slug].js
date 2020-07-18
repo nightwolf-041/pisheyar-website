@@ -8,6 +8,7 @@ import CategoriesPage from '../../components/page2/categoriesPage/CategoriesPage
 import ContactUsPage from '../../components/contactUsPage/ContactUsPage'
 import Footer from '../../components/footer/Footer'
 import Page2PlusIocn from '../../components/page2/page2PlusIocn/Page2PlusIocn'
+import OrderCreateModal from '../../components/UI/orderCreateModal/OrderCreateModal'
 
 
 const page2 = (props) => {
@@ -18,6 +19,7 @@ const page2 = (props) => {
   const description = props.categoryData.description
 
   let [hamburgerToggler, setHamburgerToggler] = useState(false)
+  let [orderCreateModalHidden, setOrderCreateModalHidden] = useState(true)
 
   const hamburgerToggleHandler = () => {
     setHamburgerToggler(hamburgerToggler => !hamburgerToggler)
@@ -25,6 +27,14 @@ const page2 = (props) => {
 
   let ogData = {...props.categoryData}
   let ogCoverDoc = {...ogData.coverDocument}.source
+
+  const showOrderCreate = () => {
+    setOrderCreateModalHidden(false)
+  }
+
+  const hideOrderCreateModal = () => {
+    setOrderCreateModalHidden(true)
+  }
 
   return (
     <>
@@ -57,7 +67,13 @@ const page2 = (props) => {
       <ContactUsPage />
       <Footer indexPage={false} />
 
-      <Page2PlusIocn />
+      <Page2PlusIocn showOrderCreate={showOrderCreate}/>
+      
+      <OrderCreateModal
+        hidden={orderCreateModalHidden}
+        orderCreateModalLabel={rgxedTitle}
+        hideOrderCreateModal={hideOrderCreateModal}
+        />
     </>
   )
 }
@@ -65,11 +81,11 @@ const page2 = (props) => {
 page2.getInitialProps = async ({query}) => {
   const { slug } = query
 
-  const res = await axios.get(`http://185.94.97.164/api/Category/GetPrimaries?guid=${slug[1]}`)
+  const res = await axios.get(`http://185.211.59.237/Category/GetPrimaries?guid=${slug[1]}`)
   const bigData = await res.data
   const data = await res.data.primaryCategories
   // axiosConfig.get('/Category/' + guid, {
-  const currentData = await axios.get(`http://185.94.97.164/api/Category/${slug[1]}?includeChildren=false`)
+  const currentData = await axios.get(`http://185.211.59.237/Category/${slug[1]}?includeChildren=false`)
   const currentDataBigData = await currentData.data
   const categoryData = await currentData.data.category
 

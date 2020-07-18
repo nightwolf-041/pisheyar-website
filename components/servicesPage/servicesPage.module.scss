@@ -114,7 +114,7 @@
     width: auto;
     height: 3.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     border-right: 0.04rem solid $brandDarkOltraLight;
@@ -148,7 +148,7 @@
     width: auto;
     height: 3.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     border-right: 0.04rem solid $brandDarkOltraLight;

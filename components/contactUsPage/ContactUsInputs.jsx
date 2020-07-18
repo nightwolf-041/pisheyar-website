@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Select from 'react-select';
+import { ToastContainer, toast } from 'react-toastify';
 import classes from './contactUsPage.module.scss'
 
 const ContactUsInputs = () => {
@@ -21,7 +22,7 @@ const ContactUsInputs = () => {
     let [sendButtonDisabler, setSendButtonDisabler ] = useState(false)
 
     React.useEffect(() => {
-        axios.get('http://185.94.97.164/api/Code/GetCodesByCodeGroupGuid?guid=107a7244-6e66-4369-8ba6-dfb0636642c4', {
+        axios.get('http://185.211.59.237/Code/GetCodesByCodeGroupGuid?guid=107a7244-6e66-4369-8ba6-dfb0636642c4', {
 
         }).then(res => {
             console.log(res.data.codes);
@@ -79,7 +80,7 @@ const ContactUsInputs = () => {
             setCategoriesValid(true)
             setSendButtonDisabler(true)
 
-            axios.post('http://185.94.97.164/api/ContactUs/SendMessage', {
+            axios.post('http://185.211.59.237/ContactUs/SendMessage', {
                 name: nameValue,
                 email: emailValue,
                 phoneNumber: PhoneValue,
@@ -90,6 +91,7 @@ const ContactUsInputs = () => {
                 setNameValue('')
                 setEmailValue('')
                 setPhoneValue('')
+                toast('عملیات موفقیت آمیز بود', {type: toast.TYPE.SUCCESS})
             })
         }
     }
@@ -128,6 +130,7 @@ const ContactUsInputs = () => {
       }
 
     return (
+        <>
         <div className={classes.contactUsInputsbox}>
            <div className={classes.contactUsInputDiv}>
                 <label htmlFor="#nameInput" className={classes.contactUsInputLabel}>نام کامل</label>
@@ -181,6 +184,16 @@ const ContactUsInputs = () => {
                 ارسال
             </button>
         </div>
+
+        <ToastContainer
+        autoClose={4000}
+        position={toast.POSITION.BOTTOM_CENTER}
+        hideProgressBar={false}
+        closeOnClick={true}
+        pauseOnVisibilityChange={false}
+        pauseOnHover={false}
+        rtl/>
+        </>
     )
 }
 

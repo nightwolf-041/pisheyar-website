@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { Scrollbar  } from 'react-scrollbars-custom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt , faHome, faLayerGroup, faUsers, faCubes, faMobileAlt, faBlog, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import classes from './hamburgerMenu.module.scss'
