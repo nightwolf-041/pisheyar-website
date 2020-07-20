@@ -1,9 +1,0 @@
-@font-face {
-    font-family: Yekan;
-    src: url('../assets/fonts/iran-yekan/iranyekan.woff2');
-}
-
-body {
-    margin: 0 auto;
-    font-family: Yekan;
-}

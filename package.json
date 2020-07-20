@@ -28,7 +28,8 @@
     },
     "license": "ISC",
     "browserslist": [
-        "last 2 versions",
-        "> 1%"
+        "> 0%",
+        "not dead",
+        "last 2 versions"
     ]
 }

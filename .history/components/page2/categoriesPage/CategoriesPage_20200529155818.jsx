@@ -1,1 +1,0 @@
-import classes from 'categoriesPage.module.scss'

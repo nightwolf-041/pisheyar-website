@@ -5,7 +5,7 @@
     height: auto;
     background-color: $aboutSection;
     overflow: hidden;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .aboutUsLeft {
@@ -74,17 +74,24 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 3rem;
-    margin-right: 4rem;
+    // margin-right: 4rem;
 }
 
 .aboutUsRightBottomItem {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 3rem;
-    margin-left: 7rem;
+    // margin-left: 8rem;
+}
+
+.aboutUsRightBottomItem:nth-child(2){
+    margin-left: 10rem;
+}
+.aboutUsRightBottomItem:nth-child(4){
+    margin-left: 10rem;
 }
 
 .aboutUsRightBottomItemIcon {
@@ -99,9 +106,15 @@
 }
 
 .aboutUsRightBottomItemSubtitle {
+    // width: 10rem;
+    height: auto;
+    direction: rtl;
     font-size: 0.9rem;
-    line-height: 1.3rem;
+    line-height: 1.4rem;
     text-align: right;
+    // text-justify: inter-character;
+    // letter-spacing: 0;
+    // word-spacing: 1px;
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
 }
@@ -109,10 +122,13 @@
 @media screen and (max-width: 1200px) {
     .aboutUsRightBottomItemsbox {
         width: 30rem;
-        margin-right: 1.5rem;
+        // margin-right: 1.5rem;
     }
-    .aboutUsRightBottomItem {
-        margin-left: 5rem;
+    .aboutUsRightBottomItem:nth-child(2){
+        margin-left: 7rem;
+    }
+    .aboutUsRightBottomItem:nth-child(4){
+        margin-left: 7rem;
     }
 }
 
@@ -146,11 +162,23 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    .aboutUsRightBottomItem:nth-child(2){
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .aboutUsRightBottomItem:nth-child(4){
+           margin-left: 1rem;
+        margin-right: 1rem;
+    }
     .aboutUsRightBottomItemTitle {
         font-size: 1.1rem;
     }
     .aboutUsRightBottomItemSubtitle {
+        // width: 12rem;
         text-align: center;
+        text-justify: inter-character;
+        letter-spacing: 1px;
+        word-spacing: 1px;
     }
 }
 
@@ -205,9 +233,23 @@
         width: 100%;
     }
     .aboutUsRightBottomItem {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+        // width: 90%;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
     .aboutUsRightBottomItemIcon {
         width: 5rem;
     }
+    // .aboutUsRightBottomItem:nth-child(1){
+    //     margin-bottom: 3rem;
+    //     margin-left: 0;
+    //     margin-right: 0;
+    // }
+    // .aboutUsRightBottomItem:nth-child(2){
+    //     margin-bottom: 3rem;
+    //     margin-left: 0;
+    //     margin-right: 0;
+    // }
 }
