@@ -20,6 +20,11 @@ body {
     box-sizing: border-box;
 }
 
+.Toastify__toast-body {
+    font-weight: Yekan !important;
+    text-align: right !important;
+}
+
 button:disabled {
     cursor: no-drop;
 }

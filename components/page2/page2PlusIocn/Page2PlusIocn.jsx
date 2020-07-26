@@ -6,7 +6,7 @@ import {CSSPlugin} from 'gsap';
 import classes from './page2PlusIocn.module.scss'
 
 const C = CSSPlugin;
-function Page2PlusIocn() {
+function Page2PlusIocn(props) {
     const page2PlusIocnBox = useRef()
     const page2PlusIocnSpan = useRef()
     let [toggle, setToggle] = useState(false)

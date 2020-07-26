@@ -28,7 +28,7 @@ const page2 = (props) => {
   let ogData = {...props.categoryData}
   let ogCoverDoc = {...ogData.coverDocument}.source
 
-  const showOrderCreate = () => {
+  const showOrderCreateHandler = () => {
     setOrderCreateModalHidden(false)
   }
 
@@ -67,7 +67,7 @@ const page2 = (props) => {
       <ContactUsPage />
       <Footer indexPage={false} />
 
-      <Page2PlusIocn showOrderCreate={showOrderCreate}/>
+      <Page2PlusIocn showOrderCreate={showOrderCreateHandler}/>
       
       <OrderCreateModal
         hidden={orderCreateModalHidden}

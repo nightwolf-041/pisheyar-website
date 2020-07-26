@@ -9,10 +9,12 @@ const ContactUsInputs = () => {
     let [nameValue, setNameValue ] = useState('')
     let [emailValue, setEmailValue ] = useState('')
     let [PhoneValue, setPhoneValue ] = useState('')
+    let [descriptionValue, setDescriptionValue ] = useState('')
 
     let [nameValid, setNameValid ] = useState(true)
     let [emailValid, setEmailValid ] = useState(true)
     let [PhoneValid, setPhoneValid ] = useState(true)
+    let [descriptionValid, setDescriptionValid ] = useState(true)
 
     let [categoriesLoading, setCategoriesLoading ] = useState(true)
     let [categories, setCategories ] = useState([])
@@ -40,6 +42,9 @@ const ContactUsInputs = () => {
     const phoneInputChangeHandler = (e) => {
         setPhoneValue(e.target.value)
     }
+    const textareaChangeHandler = (e) => {
+        setDescriptionValue(e.target.value)
+    }
     const categoriesSelectChangeHandler = (val) => {
         setSelectedCategory(val)
     }
@@ -66,6 +71,12 @@ const ContactUsInputs = () => {
         }else{
             setPhoneValid(true)
         }
+        
+        if(descriptionValue.length === 0){
+            setDescriptionValid(false)
+        }else{
+            setDescriptionValid(true)
+        }
 
         if(selectedCategory === null){
             setCategoriesValid(false)
@@ -73,10 +84,11 @@ const ContactUsInputs = () => {
             setCategoriesValid(true)
         }
 
-        if(nameValue.length !== 0 && emailPattern.test(emailValue) && PhoneValue.length !== 0 && phonePattern.test(PhoneValue) && selectedCategory !== null){
+        if(nameValue.length !== 0 && emailPattern.test(emailValue) && PhoneValue.length !== 0 && phonePattern.test(PhoneValue) && descriptionValue.length !== 0 && selectedCategory !== null){
             setNameValid(true)
             setEmailValid(true)
             setPhoneValid(true)
+            setDescriptionValid(true)
             setCategoriesValid(true)
             setSendButtonDisabler(true)
 
@@ -84,15 +96,18 @@ const ContactUsInputs = () => {
                 name: nameValue,
                 email: emailValue,
                 phoneNumber: PhoneValue,
+                message: descriptionValue,
                 contactUsBusinessTypeGuid: selectedCategory.codeGuid
             }).then(res =>{
-                console.log(res.data);
                 setSendButtonDisabler(false)
                 setNameValue('')
                 setEmailValue('')
                 setPhoneValue('')
+                setDescriptionValue('')
                 toast('عملیات موفقیت آمیز بود', {type: toast.TYPE.SUCCESS})
             })
+        }else{
+            toast('لطفا تمامی ورودی ها را پر کنید', {type: toast.TYPE.WARNING})
         }
     }
 
@@ -177,6 +192,16 @@ const ContactUsInputs = () => {
                     getOptionValue={option => option.name}
                     onChange={val => categoriesSelectChangeHandler(val)}
                 />
+            </div>
+            <div className={classes.contactUsTextareaDiv}>
+                <div className={classes.contactUsTextareaLabelBox}>
+                    <label htmlFor="#Textarea" className={classes.contactUsTextareaLabel}>پیام</label>
+                </div>
+                <textarea id="Textarea"
+                  value={descriptionValue}
+                  className={descriptionValid ? classes.contactUsTextarea : classes.contactUsTextareaInvalid}
+                onChange={(e) => textareaChangeHandler(e)}>
+                </textarea>
             </div>
             <button className={classes.contactUsSubmitButton}
             disabled={sendButtonDisabler}

@@ -147,8 +147,8 @@ import classes from './orderCreateModal.module.scss'
 const OrderCreateModal = (props) => {
 
     const redirectToPanel = () => {
+        document.location.href = "http://panel.pisheplus.com";
     }
-
 
     return (
         <>
@@ -169,9 +169,12 @@ const OrderCreateModal = (props) => {
                 <div className={classes.orderCreateModalButtonsBox}>
                     <button className={classes.orderCreateModalButton}
                     onClick={() => redirectToPanel()}>
-                        <Link href="http://panel.pisheplus.com">
-                            <a className={classes.orderCreateModalButtonLink} >انتقال به پنل کاربری</a>
-                        </Link>
+                        {/* <button
+                        onClick={redirectToPanel}> */}
+                            <a className={classes.orderCreateModalButtonLink}>
+                                انتقال به پنل کاربری
+                            </a>
+                        {/* </button> */}
                     </button>
                 </div>
             </div>

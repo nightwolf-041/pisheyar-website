@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import axios from 'axios'
+import Link from 'next/link'
 import { TimelineMax, TweenMax, Bounce, Elastic } from "gsap";
 import MenuPageSearch from './MenuPageSearch'
 import classes from './menuPage.module.scss'
@@ -22,41 +23,49 @@ class MenuPage extends Component {
             centerBox1ActiveIconDoc: {},
             centerBox1InActiveIconDoc: {},
             centerBox1Title: '',
+            centerBox1Guid: '',
 
             centerBox2Doc: {},
             centerBox2ActiveIconDoc: {},
             centerBox2InActiveIconDoc: {},
             centerBox2Title: '',
+            centerBox2Guid: '',
 
             centerBox3Doc: {},
             centerBox3ActiveIconDoc: {},
             centerBox3InActiveIconDoc: {},
             centerBox3Title: '',
+            centerBox3Guid: '',
 
             centerBox4Doc: {},
             centerBox4ActiveIconDoc: {},
             centerBox4InActiveIconDoc: {},
             centerBox4Title: '',
+            centerBox4Guid: '',
 
             centerBox5Doc: {},
             centerBox5ActiveIconDoc: {},
             centerBox5InActiveIconDoc: {},
             centerBox5Title: '',
+            centerBox5Guid: '',
 
             centerBox6Doc: {},
             centerBox6ActiveIconDoc: {},
             centerBox6InActiveIconDoc: {},
             centerBox6Title: '',
+            centerBox6Guid: '',
 
             centerBox7Doc: {},
             centerBox7ActiveIconDoc: {},
             centerBox7InActiveIconDoc: {},
             centerBox7Title: '',
+            centerBox7Guid: '',
 
             centerBox8Doc: {},
             centerBox8ActiveIconDoc: {},
             centerBox8InActiveIconDoc: {},
             centerBox8Title: '',
+            centerBox8Guid: '',
         }
 
         this.circleMenuMain = null;
@@ -153,48 +162,56 @@ class MenuPage extends Component {
             const centerBox1ActiveIconDoc = {...centerBox1Destructure.activeIconDocument}
             const centerBox1InActiveIconDoc = {...centerBox1Destructure.inactiveIconDocument}
             const centerBox1Title = centerBox1Destructure.title
+            const centerBox1Guid = centerBox1Destructure.categoryGuid
 
             const centerBox2Destructure  = {...res.data.primaryCategories[1]}
             const centerBox2Doc = {...centerBox2Destructure.quadMenuDocument}
             const centerBox2ActiveIconDoc = {...centerBox2Destructure.activeIconDocument}
             const centerBox2InActiveIconDoc = {...centerBox2Destructure.inactiveIconDocument}
             const centerBox2Title = centerBox2Destructure.title
+            const centerBox2Guid = centerBox2Destructure.categoryGuid
 
             const centerBox3Destructure  = {...res.data.primaryCategories[2]}
             const centerBox3Doc = {...centerBox3Destructure.quadMenuDocument}
             const centerBox3ActiveIconDoc = {...centerBox3Destructure.activeIconDocument}
             const centerBox3InActiveIconDoc = {...centerBox3Destructure.inactiveIconDocument}
             const centerBox3Title = centerBox3Destructure.title
+            const centerBox3Guid = centerBox3Destructure.categoryGuid
 
             const centerBox4Destructure  = {...res.data.primaryCategories[3]}
             const centerBox4Doc = {...centerBox4Destructure.quadMenuDocument}
             const centerBox4ActiveIconDoc = {...centerBox4Destructure.activeIconDocument}
             const centerBox4InActiveIconDoc = {...centerBox4Destructure.inactiveIconDocument}
             const centerBox4Title = centerBox4Destructure.title
+            const centerBox4Guid = centerBox4Destructure.categoryGuid
 
             const centerBox5Destructure  = {...res.data.primaryCategories[4]}
             const centerBox5Doc = {...centerBox5Destructure.quadMenuDocument}
             const centerBox5ActiveIconDoc = {...centerBox5Destructure.activeIconDocument}
             const centerBox5InActiveIconDoc = {...centerBox5Destructure.inactiveIconDocument}
             const centerBox5Title = centerBox5Destructure.title
+            const centerBox5Guid = centerBox5Destructure.categoryGuid
 
             const centerBox6Destructure  = {...res.data.primaryCategories[5]}
             const centerBox6Doc = {...centerBox6Destructure.quadMenuDocument}
             const centerBox6ActiveIconDoc = {...centerBox6Destructure.activeIconDocument}
             const centerBox6InActiveIconDoc = {...centerBox6Destructure.inactiveIconDocument}
             const centerBox6Title = centerBox6Destructure.title
+            const centerBox6Guid = centerBox6Destructure.categoryGuid
 
             const centerBox7Destructure  = {...res.data.primaryCategories[6]}
             const centerBox7Doc = {...centerBox7Destructure.quadMenuDocument}
             const centerBox7ActiveIconDoc = {...centerBox7Destructure.activeIconDocument}
             const centerBox7InActiveIconDoc = {...centerBox7Destructure.inactiveIconDocument}
             const centerBox7Title = centerBox7Destructure.title
+            const centerBox7Guid = centerBox7Destructure.categoryGuid
 
             const centerBox8Destructure  = {...res.data.primaryCategories[7]}
             const centerBox8Doc = {...centerBox8Destructure.quadMenuDocument}
             const centerBox8ActiveIconDoc = {...centerBox8Destructure.activeIconDocument}
             const centerBox8InActiveIconDoc = {...centerBox8Destructure.inactiveIconDocument}
             const centerBox8Title = centerBox8Destructure.title
+            const centerBox8Guid = centerBox8Destructure.categoryGuid
 
 
             this.setState({
@@ -204,41 +221,49 @@ class MenuPage extends Component {
                 centerBox1ActiveIconDoc,
                 centerBox1InActiveIconDoc,
                 centerBox1Title,
+                centerBox1Guid,
 
                 centerBox2Doc,
                 centerBox2ActiveIconDoc,
                 centerBox2InActiveIconDoc,
                 centerBox2Title,
+                centerBox2Guid,
 
                 centerBox3Doc,
                 centerBox3ActiveIconDoc,
                 centerBox3InActiveIconDoc,
                 centerBox3Title,
+                centerBox3Guid,
 
                 centerBox4Doc,
                 centerBox4ActiveIconDoc,
                 centerBox4InActiveIconDoc,
                 centerBox4Title,
+                centerBox4Guid,
 
                 centerBox5Doc,
                 centerBox5ActiveIconDoc,
                 centerBox5InActiveIconDoc,
                 centerBox5Title,
+                centerBox5Guid,
 
                 centerBox6Doc,
                 centerBox6ActiveIconDoc,
                 centerBox6InActiveIconDoc,
                 centerBox6Title,
+                centerBox6Guid,
 
                 centerBox7Doc,
                 centerBox7ActiveIconDoc,
                 centerBox7InActiveIconDoc,
                 centerBox7Title,
+                centerBox7Guid,
 
                 centerBox8Doc,
                 centerBox8ActiveIconDoc,
                 centerBox8InActiveIconDoc,
                 centerBox8Title,
+                centerBox8Guid
             })
         }).catch(err => {
             console.log(err)
@@ -855,15 +880,20 @@ class MenuPage extends Component {
 
                 <MenuPageSearch />
 
-                <div id="centerBox1" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox1].join(' ')}
-                ref={div => this.centerBox1 = div}>
-                    <img src={this.state.centerBox1Doc.source} alt=""
-                    className={classes.circleMenuMainCenterBoxImage}/>
-                    <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
-                    <div className={classes.circleMenuMainCenterBoxText}>
-                        {this.state.centerBox1Title}
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox1Title.replace(/ /g,'-')}/${this.state.centerBox1Guid}`}>
+                    <div id="centerBox1" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox1].join(' ')}
+                    ref={div => this.centerBox1 = div}>
+                        <img src={this.state.centerBox1Doc.source} alt=""
+                        className={classes.circleMenuMainCenterBoxImage}/>
+                        <div className={classes.circleMenuMainCenterBoxBackdrop}></div>
+                        <div className={classes.circleMenuMainCenterBoxText}>
+                            {this.state.centerBox1Title}
+                        </div>
                     </div>
-                </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox2Title.replace(/ /g,'-')}/${this.state.centerBox2Guid}`}>
                 <div id="centerBox2" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox2].join(' ')}
                 ref={div => this.centerBox2 = div}>
                      <img src={this.state.centerBox2Doc.source} alt=""
@@ -873,6 +903,9 @@ class MenuPage extends Component {
                         {this.state.centerBox2Title}
                     </div>
                 </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox3Title.replace(/ /g,'-')}/${this.state.centerBox3Guid}`}>
                 <div id="centerBox3" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox3].join(' ')}
                 ref={div => this.centerBox3 = div}>
                     <img src={this.state.centerBox3Doc.source} alt=""
@@ -882,6 +915,9 @@ class MenuPage extends Component {
                         {this.state.centerBox3Title}
                     </div>
                 </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox4Title.replace(/ /g,'-')}/${this.state.centerBox4Guid}`}>
                 <div id="centerBox4" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox4].join(' ')}
                 ref={div => this.centerBox4 = div}>
                     <img src={this.state.centerBox4Doc.source} alt=""
@@ -891,6 +927,9 @@ class MenuPage extends Component {
                         {this.state.centerBox4Title}
                     </div>
                 </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox5Title.replace(/ /g,'-')}/${this.state.centerBox5Guid}`}>
                 <div id="centerBox5" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox5].join(' ')}
                 ref={div => this.centerBox5 = div}>
                     <img src={this.state.centerBox5Doc.source} alt=""
@@ -900,6 +939,9 @@ class MenuPage extends Component {
                         {this.state.centerBox5Title}
                     </div>
                 </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox6Title.replace(/ /g,'-')}/${this.state.centerBox6Guid}`}>
                 <div id="centerBox6" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox6].join(' ')}
                 ref={div => this.centerBox6 = div}>
                     <img src={this.state.centerBox6Doc.source} alt=""
@@ -909,6 +951,9 @@ class MenuPage extends Component {
                         {this.state.centerBox6Title}
                     </div>
                 </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox7Title.replace(/ /g,'-')}/${this.state.centerBox7Guid}`}>
                 <div id="centerBox7" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox7].join(' ')}
                 ref={div => this.centerBox7 = div}>
                     <img src={this.state.centerBox7Doc.source} alt=""
@@ -918,6 +963,9 @@ class MenuPage extends Component {
                         {this.state.centerBox7Title}
                     </div>
                 </div>
+                </Link>
+                <Link
+                href={`/category/[...slug].js`} as={`/category/${this.state.centerBox8Title.replace(/ /g,'-')}/${this.state.centerBox8Guid}`}>
                 <div id="centerBox8" className={[classes.circleMenuMainCenterBox, classes.circleMenuMainCenterBox8].join(' ')}
                 ref={div => this.centerBox8 = div}>
                     <img src={this.state.centerBox8Doc.source} alt=""
@@ -927,6 +975,7 @@ class MenuPage extends Component {
                         {this.state.centerBox8Title}
                     </div>
                 </div>
+                </Link>
 
                 <div id="circleMenuMain" className={classes.circleMenuMain} ref={div => this.circleMenuMain = div}>
 
