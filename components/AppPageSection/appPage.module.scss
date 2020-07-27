@@ -36,11 +36,11 @@
 }
 
 .appPageLeftSlider {
-    width: 11.18rem;
+    width: 11.25rem;
     height: 22.4rem;
     position: absolute;
     top: 3.7rem;
-    left: 10rem;
+    left: 9.9rem;
     z-index: 3;
 }
 
@@ -172,6 +172,7 @@
 
 .appPageRightDesc {
     width: 50%;
+    height: 4rem;
     font-size: 0.9rem;
     font-weight: normal;
     color: $brandDark;
@@ -180,19 +181,19 @@
 }
 
 .appPageRightSocialbox {
-    width: 50%;
+    width: 30rem;
     height: auto;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
 .appPageRightSocialImage {
-    width: 6rem;
-    margin-left: 1rem;
+    width: 100%;
 }
 
 .appPageRightSocialImageLink {
@@ -201,6 +202,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 10rem;
+    margin-left: 2rem;
+    margin-bottom: 0.8rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -266,14 +270,17 @@
         font-weight: bolder !important;
     }
     .appPageRightSocialbox {
-        width: 90%;
+        width: 100%;
         justify-content: center;
-        margin: 10rem auto 1rem auto;
+        margin: 8rem auto 1rem auto;
     }
     .appPageRightSocialImage {
-        width: 7rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        width: 100%;
+    }
+    .appPageRightSocialImageLink {
+        width: 10rem;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
     }
     .appPageRightSubtitle {
         font-size: 1.2rem;
@@ -324,13 +331,22 @@
         font-size: 0.9rem;
     }
     .appPageRightSocialbox {
-        width: 95%;
+        width: 80%;
         margin-top: 3rem;
     }
     .appPageRightSocialImage {
-        width: 6rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        width: 100%;
+    }
+    .appPageRightSocialImageLink {
+        width: 10rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .appPageRightSocialbox {
+        width: 90%;
     }
 }
 
@@ -340,9 +356,12 @@
         flex-wrap: wrap;
     }
     .appPageRightSocialImage {
-        width: 7.5rem;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        width: 100%;
+    }
+    .appPageRightSocialImageLink {
+        width: 9rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         margin-bottom: 1rem;
     }
     .appPageRightTitle {
@@ -357,6 +376,18 @@
     .appPageRightDesc {
         width: 100%;
         font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 451px) {
+    .appPageRightSocialImage {
+        width: 100%;
+    }
+    .appPageRightSocialImageLink {
+        width: 11rem;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -388,5 +419,14 @@
     }
     .appPageRightSubtitle {
         font-size: 1.1rem;
+    }
+    .appPageRightSocialImage {
+        width: 100%;
+    }
+    .appPageRightSocialImageLink {
+        width: 11rem;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 }

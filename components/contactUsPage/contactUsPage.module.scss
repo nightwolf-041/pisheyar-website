@@ -143,11 +143,12 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1.5rem;
+    margin-right: -0.7rem;
     z-index: 5;
 }
 
 .contactUsInputDiv {
-    width: 17rem;
+    width: 17.6rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -248,7 +249,7 @@
 }
 
 .contactUsTextareaDiv{
-    width: 35.5rem;
+    width: 36.7rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -301,7 +302,7 @@
 }
 
 .contactUsSubmitButton {
-    width: 35.5rem;
+    width: 36.7rem;
     padding: 0.5rem 0;
     background-color: $brandYellow;
     border: none;
@@ -340,21 +341,24 @@
         padding: 1rem;
         margin-top: 18rem;
     }
+    .contactUsInputsbox{
+        margin-right: -1.5rem;
+    }
     .contactUsContactbox {
         width: 23rem;
     }
     .contactUsInputDiv {
-        width: 18rem;
+        width: 20rem;
     }
     .contactUsInputDiv:nth-child(2),
     .contactUsInputDiv:nth-child(4) {
         margin-right: 0;
     }
     .contactUsTextareaDiv{
-        width: 18rem;
+        width: 20rem;
     }
     .contactUsSubmitButton {
-        width: 79%;
+        width: 20rem;
     }
     .contactUsContactboxDesc {
         width: 190%;
@@ -373,6 +377,9 @@
         width: 22rem;
         padding: 2rem;
         margin-top: 4rem;
+    }
+    .contactUsInputsbox{
+        margin-right: 0;
     }
     .contactUsContactbox {
         width: 100%;

@@ -86,7 +86,7 @@ const Footer = (props) => {
                             smooth={true} duration={500} className={classes.footerLinksboxLink}>
                                 خانه
                             </Link>
-                            <a href="#" className={classes.footerLinksboxLink}>ثبت نام / ورود</a>
+                            <a href="http://www.panel.pisheplus.com" className={classes.footerLinksboxLink}>ثبت نام / ورود</a>
                             {props.indexPage ?
                                 <>
                                 <Link activeClass={classes.activeLink} to="aboutUsPage" spy={true}
@@ -118,7 +118,8 @@ const Footer = (props) => {
                 <div className={classes.footerBottom}>
                     این سایت تابع قوانین جمهوری اسلامی ایران می باشد.
                     <br />
-                    حقوق این وب سایت محفوظ و متعلق به گروه پیشه یار میباشد
+                    &#169;
+                    حقوق این وب سایت محفوظ و متعلق به گروه پیشه یار میباشد و توسط تیم StartDone طراحی و پیاده سازی شده است.
                 </div>
             </div>
         </footer>

@@ -2,7 +2,7 @@
 .topPageSection {
     position: relative;
     width: 100%;
-    height: 56rem;
+    height: 55rem;
     // background-color: #f2f2f2;
     background-color: #f2f2f2;
     background-image: url('../../public/WideBackgroundMenupage.svg');
@@ -236,7 +236,7 @@
 
 @media screen and (max-width: 992px) {
     .topPageSection {
-        height: 47rem;
+        height: 42rem;
     }
     .homeBackgroundEllipse {
         width: 80%;
@@ -244,7 +244,7 @@
     }
     .homeHeaderPaginateBox {
         position: absolute;
-        top: 27.5rem;
+        top: 22.5rem;
         left: 1.5rem;
     }
     .homeHeaderImagesbox,
@@ -257,7 +257,7 @@
     .homeHeaderTitlebox3 {
         right: 10%;
         width: 80%;
-        top: 20rem;
+        top: 14rem;
     }
     .homeHeaderTitlebox h1,
     .homeHeaderTitlebox2 h1,
@@ -269,7 +269,7 @@
     .homeHeaderButtonbox3 {
         right: 10%;
         width: 80%;
-        top: 34rem;
+        top: 28rem;
     }
 }
 
@@ -281,10 +281,10 @@
 
 @media screen and (max-width: 768px) {
     .topPageSection {
-        height: 37rem;
+        height: 39rem;
     }
     .homeHeaderPaginateBox {
-        top: 30.5rem;
+        top: 26.5rem;
         left: 1.5rem;
     }
     .homeHeaderTitlebox,
@@ -326,6 +326,13 @@
 @media screen and (max-width: 680px) {
     .homeBackgroundEllipse {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .homeHeaderPaginateBox {
+        top: 30.5rem;
+        left: 1.5rem;
     }
 }
 

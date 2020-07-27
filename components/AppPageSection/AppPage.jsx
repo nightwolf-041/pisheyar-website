@@ -28,8 +28,6 @@ const AppPageSection = () => {
             delay: 5000,
             disableOnInteraction: false
         },
-        // getSwiper: (sw) => alert(sw),
-        // renderPagination: (sw) => console.log(sw)
         on: {
             slideChange: () => {
                 let mySwiper = document.querySelector('.appPage-swiper-container').swiper;
@@ -77,22 +75,24 @@ const AppPageSection = () => {
                     }
                     </p>
                     <div className={classes.appPageRightSocialbox}>
-                        <a href={currentIndex === 0 ? "googleplay" : "gooooooogleplay"}
+                        <a href={currentIndex === 0 ?
+                        "https://play.google.com/store/apps/details?id=com.pisheplus_contractor" :
+                        "https://play.google.com/store/apps/details?id=com.pisheyarplus_client"}
                         className={classes.appPageRightSocialImageLink}>
                             <img src="/GooglePlay.png" alt=""
                             className={classes.appPageRightSocialImage} />
                         </a>
-                        <a href={currentIndex === 0 ? "googleplay" : "gooooooogleplay"}
+                        <a href={currentIndex === 0 ? "#" : "#"}
                         className={classes.appPageRightSocialImageLink}>
                             <img src="/Appstore.png" alt=""
                             className={classes.appPageRightSocialImage} />
                         </a>
-                        <a href={currentIndex === 0 ? "googleplay" : "gooooooogleplay"}
+                        <a href={currentIndex === 0 ? "#" : "#"}
                         className={classes.appPageRightSocialImageLink}>
                             <img src="/Sibapp.png" alt=""
                             className={classes.appPageRightSocialImage} />
                         </a>
-                        <a href={currentIndex === 0 ? "googleplay" : "gooooooogleplay"}
+                        <a href={currentIndex === 0 ? "#" : "#"}
                         className={classes.appPageRightSocialImageLink}>
                             <img src="/Bazaar.png" alt=""
                             className={classes.appPageRightSocialImage} />
