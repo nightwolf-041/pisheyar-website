@@ -13,6 +13,8 @@ import OrderCreateModal from '../../components/UI/orderCreateModal/OrderCreateMo
 
 const page2 = (props) => {
 
+  console.log(props.data)
+
   const router = useRouter()
   const givenTitle =  router.query.slug[0]
   let rgxedTitle = givenTitle.replace(/-/g, " ")

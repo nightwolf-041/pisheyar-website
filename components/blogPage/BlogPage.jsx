@@ -21,7 +21,7 @@ const BlogPage = () => {
         <section name="blogPage" className={classes.blogPageSection}>
             <div className="container">
                 <div className={classes.blogPageTitlebox}>
-                    <h4 className={classes.blogPageTitle}>بلاگ ما</h4>
+                    <a href="http://mag.pisheplus.com" className={classes.blogPageTitle}>بلاگ ما</a>
                     <p className={classes.blogPageDesc}>
                         آخرین اخبار صنعتی را در بلاگ پیشه پلاس دنبال کنید؛ شما می توانید با وارد شدن به بلاگ پیشه پلاس از اخبار به رور صنعتی با خبر شوید
                     </p>
@@ -29,7 +29,7 @@ const BlogPage = () => {
                 <div className={classes.blogPagePostsbox}>
                     {posts !== null && posts !== [] && posts !== undefined ?
                     posts.map((post, index) => (
-                        <div className={classes.blogPagePost} key={index}>
+                        <a href={`http://mag.pisheplus.com/${post.slug}`} className={classes.blogPagePost} key={index}>
                             <div className={classes.blogPagePostImagebox}>
                                 <img src={post.document.source} alt="" className={classes.blogPagePostImage} />
                             </div>
@@ -50,12 +50,12 @@ const BlogPage = () => {
                                 </div>
                             </div>
                             <h5 className={classes.blogPagePostTitle}>
-                                {post.abstract}
+                                {post.title}
                             </h5>
                             <p className={classes.blogPagePostDesc}>
-                                {post.description}
+                                {post.abstract}
                             </p>
-                        </div>
+                        </a>
                     )) : 
                     <div className={classes.blogPageEmptyMsg}>
                         موردی یافت نشد

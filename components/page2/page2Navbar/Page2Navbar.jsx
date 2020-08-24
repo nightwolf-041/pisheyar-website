@@ -23,11 +23,17 @@ const Page2Navbar = (props) => {
         <nav className={classes.page2Navbar}>
             <div className={classes.page2NavbarContainer}>
                 <div className={classes.page2NavbarLoginIconBox}>
-                    <FontAwesomeIcon icon={faUserCircle} className={classes.page2NavbarLoginIcon}
-                    title="ورود" />
+                    <a href="http://panel.pisheplus.com"
+                    target="_blank">
+                        <FontAwesomeIcon
+                            icon={faUserCircle}
+                            className={classes.page2NavbarLoginIcon}
+                            title="ورود/ ثبت نام"
+                        />
+                    </a>
                 </div>
                 {onTop ? 
-                    <img src="/loge_with_txt.svg" alt="pisheyar" className={classes.page2NavbarLogo} />
+                    <img src="/logo-yellow.png" alt="pisheyar" className={classes.page2NavbarLogo} />
                     : null
                 }
                 <Link href="/">

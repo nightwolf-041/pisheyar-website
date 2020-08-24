@@ -7,20 +7,21 @@ import { faAngleLeft, faAngleRight, faToolbox } from "@fortawesome/free-solid-sv
 import classes from './categoriesPage.module.scss'
 
 function Page2Slider(props) {
-    console.log(props.data);
-    console.log(props.data.description);
 
-    const [swiper, updateSwiper] = React.useState(null);
+    const ref = React.useRef(null)
 
     const goNext = () => {
-      if (swiper !== null) {
-        swiper.slideNext();
-      }
+        console.log('prev')
+        if (ref.current !== null && ref.current.swiper !== null) {
+          ref.current.swiper.slideNext();
+        }
     };
+    
     const goPrev = () => {
-      if (swiper !== null) {
-        swiper.slidePrev();
-      }
+        console.log('next')
+        if (ref.current !== null && ref.current.swiper !== null) {
+            ref.current.swiper.slidePrev();
+        }
     };
 
     const params = {
@@ -32,26 +33,31 @@ function Page2Slider(props) {
           centeredSlides: true,
           slidesPerView: 'auto',
           spaceBetween: 20,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
           pagination: {
             el: '.swiper-pagination-bottomSlider',
-            clickable: true,
-          //   dynamicBullets: true
+            clickable: true
           },
           breakpoints: {
-            1280: {
+            1320: {
                 centeredSlides: false,
                 slidesPerView: 4,
                 spaceBetween: 20,
             },
-            950: {
+            990: {
                 centeredSlides: false,
                 slidesPerView: 3,
                 spaceBetween: 20,
             },
             750: {
-                centeredSlides: false,
-                slidesPerView: 2,
-                spaceBetween: 20,
+                // centeredSlides: false,
+                // slidesPerView: 2,
+                // spaceBetween: 20,
+                centeredSlides: true,
+                slidesPerView: 'auto',
             },
             500: {
                 centeredSlides: true,
@@ -66,15 +72,18 @@ function Page2Slider(props) {
         }
     }
 
+    return (
+        <>
+        <div className="sliderContainer">
+            {
+                props.data !== null && props.data !== undefined && props.data !== [] ?
 
-    const renderByCoundition = () => {
-        if(props.data !== null && props.data !== [] && props.data !== undefined) {
-            if(props.data.length > 3){
-                return(
-                    <div className={classes.page2SliderContainer}>
+                props.data.length > 3 ?
+                <div className={classes.page2SliderContainer}>
                         <div className={classes.page2Slider}>
-                            <Swiper {...params} getSwiper={updateSwiper}>
-                                {props.data.map((dt, index) => {
+                            <Swiper ref={ref} {...params }>
+                            {props.data !== null && props.data !== undefined && props.data !== [] ?
+                                props.data.map((dt, index) => (
                                     <div className={classes.page2SliderItem}
                                     key={index}>
                                         <div className={classes.page2SliderItemTop}>
@@ -84,11 +93,11 @@ function Page2Slider(props) {
                                                 {dt.title}
                                             </h4>
                                         </div>
-                                        <div className={classes.page2SliderItemPriceBox}>
+                                        {/* <div className={classes.page2SliderItemPriceBox}>
                                             <span>از</span>
                                             <h5>770,000</h5>
                                             <span>تومان</span>
-                                        </div>
+                                        </div> */}
                                         <div className={classes.page2SliderItemButtonBox}>
                                             <Link
                                             href={`/category/[...slug].js`} as={`/category/${dt.title.replace(/ /g,'-')}/${dt.categoryGuid}`}>
@@ -98,8 +107,7 @@ function Page2Slider(props) {
                                             </Link>
                                         </div>
                                     </div>
-                                })}
-                                
+                                )) : null}
                             </Swiper>
                         </div>
                         <button className={classes.page2SliderPrev}
@@ -117,9 +125,8 @@ function Page2Slider(props) {
                             className={classes.page2SliderNextIcon2} />
                         </button>
                     </div>
-                )
-            }else if(props.data.length <= 3 && props.data.length > 0) {
-               return (
+                    :
+                    props.data.length <= 3 && props.data.length > 0 ?
                     <div className={classes.page2SliderLessItemsBox}>
                     {props.data !== null && props.data !== [] ?
                         props.data.map((dt, index) => (
@@ -132,11 +139,11 @@ function Page2Slider(props) {
                                         {dt.title}
                                     </h4>
                                 </div>
-                                <div className={classes.page2SliderItemPriceBox}>
+                                {/* <div className={classes.page2SliderItemPriceBox}>
                                     <span>از</span>
                                     <h5>770,000</h5>
                                     <span>تومان</span>
-                                </div>
+                                </div> */}
                                 
                                 <div className={classes.page2SliderItemButtonBox}>
                                     <Link
@@ -151,27 +158,16 @@ function Page2Slider(props) {
                         :null
                         }
                     </div>
-               )
-            }else{
-                return(
+                    :
                     <div className={classes.page2SliderEmptyMsg}>
                         موردی یافت نشد
                     </div>
-                )
-            }
-        }else{
-            return(
+
+                : 
                 <div className={classes.page2SliderEmptyMsg}>
                     موردی یافت نشد
                 </div>
-            )
-        }
-    }
-
-    return (
-        <>
-        <div className="sliderContainer">
-            {renderByCoundition()}
+            }
         </div>
 
         <div className="container">

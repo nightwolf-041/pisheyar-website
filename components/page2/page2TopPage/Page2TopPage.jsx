@@ -31,12 +31,17 @@ const Page2TopPage = (props) => {
 
     return(
         <section className={classes.page2TopPage}>
-            <img src={background} alt="category background"
+            <img src={background} alt=""
             className={classes.page2TopPageImage} />
             <div className={classes.page2TopPageBackdrop}></div>
-            <img src={secondCover} alt="category image"
+            <img src={secondCover} alt=""
             ref={element => {imageRight.current = element}}
-            className={classes.page2TopPageManShape} />
+            className={
+                secondCover !== null ? 
+                classes.page2TopPageManShape :
+                classes.page2TopPageManShapeHide
+            }
+            />
             <div className={classes.page2TopPageTitleBox}>
                 <h1 className={classes.page2TopPageTitle}
             ref={element => {titleLeft.current = element}}>

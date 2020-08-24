@@ -26,7 +26,23 @@ body {
 }
 
 button:disabled {
-    cursor: no-drop;
+    cursor: no-drop !important;
+}
+
+.react-code-input {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.react-code-input input {
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 1.2rem !important;
+    border: none !important;
+    outline: none !important;
 }
 
 a {
@@ -36,6 +52,120 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+/* CKEditor neceseries styles  */
+
+.marker-green {
+    background-color: rgba(116, 226, 122, 0.459);
+}
+
+.marker-red {
+    background-color: #f7534775;
+}
+
+.marker-yellow {
+    background-color: rgba(255, 233, 36, 0.459);
+}
+
+.marker-blue {
+    background-color: #BBDEFB;
+}
+
+.marker-grey {
+    background-color: rgba(204, 204, 204, 0.726);
+}
+
+figcaption {
+    text-align: center !important;
+}
+
+.image img {
+    width: 100%;
+}
+
+.image_resized {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    /* display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important; */
+    overflow: hidden !important;
+}
+
+.image_resized img {
+    width: -webkit-fill-available !important;
+    max-width: 100% !important;
+}
+
+@supports not (width: -webkit-fill-available) {
+    .image_resized img {
+        width: inherit !important;
+        max-width: 100% !important;
+    }
+}
+
+.image-style-align-left {
+    max-width: 50% !important;
+    text-align: left !important;
+    float: left !important;
+    text-align: center !important;
+    /* display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; */
+    overflow: hidden !important;
+    margin-right: 20px !important;
+}
+
+.image-style-align-left::after,
+.image-style-align-left::before {
+    clear: both !important;
+}
+
+.image-style-align-left img {
+    width: -webkit-fill-available !important;
+    max-width: 100% !important;
+}
+
+@supports not (width: -webkit-fill-available) {
+    .image-style-align-left img {
+        width: inherit !important;
+        max-width: 100% !important;
+    }
+}
+
+.image-style-align-right {
+    max-width: 50% !important;
+    text-align: right !important;
+    float: right !important;
+    text-align: center !important;
+    /* display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important; */
+    overflow: hidden !important;
+    margin-left: 20px !important;
+}
+
+.image-style-align-right::after,
+.image-style-align-right::before {
+    clear: both !important;
+}
+
+.image-style-align-right img {
+    width: -webkit-fill-available !important;
+    max-width: 100% !important;
+}
+
+@supports not (width: -webkit-fill-available) {
+    .image-style-align-right img {
+        width: inherit !important;
+        max-width: 100% !important;
+    }
+}
+
+/* CKEditor neceseries styles  */
 
 .appPage-swiper-container{
     overflow: hidden;
@@ -145,21 +275,25 @@ a:hover {
     }
 }
 
+@media (max-width: 992px) {
+    .swiper-pagination-bottomSlider{
+        display: none !important;
+    }
+}
+
 @media (max-width: 500px) {
     .sliderContainer {
         margin-top: 17rem;
     }
 }
 
-// @media (max-width: 400px) {
-//     .sliderContainer {
-//         width: 100%;
-//     }
-//     .slick-slider{
-//         width: 140%;
-//         margin-left: -17%;
-//     }
-// }
+@media (max-width: 430px) {
+    .react-code-input input {
+        font-size: 1rem !important;
+        width: 30px !important;
+        height: 36px !important;
+    }
+}
 
 @media (min-width: 1400px) {
     .sliderContainer {

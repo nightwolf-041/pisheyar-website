@@ -68,11 +68,14 @@
 
 .blogPagePost {
     width: 19rem;
-    height: 25rem;
+    height: auto;
+    min-height: 25rem;
+    // height: auto;
     background-color: $brandDark;
     overflow: hidden;
     box-shadow: 0 0 2rem 0.5rem rgba(11, 16, 51, 0.2);
     border-radius: 0.3rem;
+    padding-bottom: 1rem;
     cursor: pointer;
 }
 
@@ -160,6 +163,7 @@
 }
 
 .blogPagePostTitle {
+    direction: rtl;
     width: 85%;
     color: #ffffff;
     font-size: 0.85rem;
@@ -170,6 +174,7 @@
 }
 
 .blogPagePostDesc {
+    direction: rtl;
     width: 85%;
     color: $subtitleFFFLight;
     font-size: 0.7rem;

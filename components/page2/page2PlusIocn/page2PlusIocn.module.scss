@@ -2,35 +2,29 @@
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    width: 2.6rem;
+    width: 10rem;
     height: 2.6rem;
     background-color: #0b1033;
-    border-radius: 100%;
+    border-radius: 1rem;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 0.5rem;
     z-index: 100;
     cursor: pointer;
     transition: all 0.3s ease-in
 }
 
-.page2PlusIocnBox:hover{
-    width: 10rem;
-    border-radius: 1rem;
-    justify-content: space-between;
-    padding: 0 0.5rem;
-    transition: all 0.3s ease-in;
-}
-
 .page2PlusIocn {
     font-size: 1.3rem;
     color: #ffd617;
+    margin-left: 0.5rem
 }
 
 .page2PlusIocnSpan{
     color: #ffd617;
     font-size: 0.8rem;
-    display: none;
-    opacity: 0
+    display: block;
+    opacity: 1
 }

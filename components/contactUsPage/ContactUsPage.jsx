@@ -27,7 +27,7 @@ const ContactUsPage = () => {
                             <FontAwesomeIcon icon={faPhoneAlt}
                                 className={classes.contactUsCallBottomItemImage} />
                             <span className={[classes.contactUsCallBottomItemSpan, classes.contactUsCallBottomItemSpanMobile].join(' ')}>
-                                021-88833746
+                                +98 2188833746
                             </span>
                         </div>
                         <div className={classes.contactUsCallBottomItem}>

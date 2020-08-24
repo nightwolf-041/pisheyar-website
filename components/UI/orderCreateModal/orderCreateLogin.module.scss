@@ -1,0 +1,158 @@
+
+@import '../../../styles/colors.scss';
+
+.loginSideMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+
+.loginSideTitle{
+  direction: rtl;
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-align: right;
+  margin: 2.5rem 0 3rem 0;
+}
+
+.loginSideTitle a {
+  direction: rtl;
+  color: $brandYellow;
+  font-size: 0.9rem;
+  text-align: right;
+  margin: 0 0.2rem;
+}
+
+.loginSidePhoneInput {
+    all: unset;
+    direction: rtl;
+    text-align: center;
+    width: calc(100% - 1.2rem);
+    color: #ffffffdb;
+    font-size: 0.9rem;
+    padding: 0.8rem 0.6rem;
+    background-color: transparent;
+    border-bottom: 1px solid $brandYellow;
+    box-shadow: 0 0 1rem 0.5rem transparent;
+    margin-bottom: 2.5rem;
+}
+
+.loginSidePhoneInput:focus::placeholder,
+.loginSidePhoneInputInvalid:focus::placeholder {
+    visibility: hidden;
+}
+
+.loginSideButtonBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.loginSideButton {
+    all: unset;
+    font-family: Yekan;
+    width: 5rem;
+    text-align: center;
+    padding: 0.7rem 1.5rem;
+    color: $brandDark;
+    font-size: 0.9rem;
+    background-color: $brandYellow;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.loginSideButton:hover {
+    background-color: $brandYellowLight;
+    transition: all 0.2s ease-in;
+}
+
+.loginSideInputErrorsSpan {
+    margin-top: -2rem;
+    margin-bottom: 1.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.7rem;
+    color: #f44336;
+    width: 94%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loginSideStep2Main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.loginStep2MainTitle {
+    direction: rtl;
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: right;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.loginCcheckKeeper {
+    display: flex;
+    width: 100%;
+    left: 0;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-top: 2rem;
+
+}
+
+.loginStep2Buttonsbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.loginStep2SubmitButton {
+    all: unset;
+    font-family: Yekan;
+    width: 4rem;
+    text-align: center;
+    padding: 0.7rem 1.5rem;
+    color: $brandDark;
+    font-size: 0.9rem;
+    background-color: $brandYellow;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.loginStep2BackButton {
+    all: unset;
+    font-family: Yekan;
+    width: 4rem;
+    text-align: center;
+    padding: 0.7rem 1.5rem;
+    color: $brandDark;
+    font-size: 0.9rem;
+    background-color: #f44336;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 430px) {
+  .loginStep2BackButton,
+  .loginStep2SubmitButton {
+    width: 3.4rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+}

@@ -10,7 +10,7 @@
 
 .aboutUsLeft {
     position: absolute;
-    top: 5rem;
+    top: 9rem;
     left: 2rem;
     width: 32%;
     height: auto;
@@ -135,6 +135,7 @@
 @media screen and (max-width: 992px) {
     .aboutUsLeft {
         width: 28%;
+        top: 5rem;
         left: 0;
     }
     .aboutUsLeftImage {

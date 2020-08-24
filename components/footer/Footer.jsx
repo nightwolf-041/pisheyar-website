@@ -16,16 +16,16 @@ const Footer = (props) => {
                             <img src="/loge_full_yellow_with_txt.svg" alt="" className={classes.footerLogo} />
                         </div>
                         <div className={classes.footerAddressbox}>
-                            <div className={classes.footerAddressboxItem}>
+                            {/* <div className={classes.footerAddressboxItem}>
                                 <FontAwesomeIcon icon={faMapMarkedAlt} className={classes.footerAddressboxItemIcon} />
                                 <span className={classes.footerAddressboxItemSpanFa}>
                                     آزادشهر، خیابان همایونی، نبش کوچه سوم، پلاک 25
                                 </span>
-                            </div>
+                            </div> */}
                             <div className={classes.footerAddressboxItem}>
                                 <FontAwesomeIcon icon={faPhoneAlt} className={classes.footerAddressboxItemIcon} />
                                 <span className={[classes.footerAddressboxItemSpan, classes.footerAddressboxItemSpanMobile].join(' ')}>
-                                    021-88833746
+                                    +98 2188833746
                                 </span>
                             </div>
                             <div className={classes.footerAddressboxItem}>
@@ -35,10 +35,10 @@ const Footer = (props) => {
                                 </span>
                             </div>
                             <div className={classes.footerAddressboxSocialsbox}>
-                                <a href="https://www.instagram.com/pisheplus">
+                                <a href="https://www.instagram.com/pisheplus" target="_blank">
                                     <FontAwesomeIcon icon={faInstagram} className={classes.footerAddressboxSocialIcon} />
                                 </a>
-                                <a href="https://wa.me/">
+                                <a href="https://wa.me/" target="_blank">
                                     <FontAwesomeIcon icon={faWhatsapp} className={classes.footerAddressboxSocialIcon} />
                                 </a>
                             </div>
@@ -86,7 +86,7 @@ const Footer = (props) => {
                             smooth={true} duration={500} className={classes.footerLinksboxLink}>
                                 خانه
                             </Link>
-                            <a href="http://www.panel.pisheplus.com" className={classes.footerLinksboxLink}>ثبت نام / ورود</a>
+                            <a href="http://panel.pisheplus.com/login" target="_blank" className={classes.footerLinksboxLink}>ثبت نام / ورود</a>
                             {props.indexPage ?
                                 <>
                                 <Link activeClass={classes.activeLink} to="aboutUsPage" spy={true}
@@ -112,6 +112,9 @@ const Footer = (props) => {
                             smooth={true} duration={500} className={classes.footerLinksboxLink}>
                                 ارتباط با ما
                             </Link>
+                            <a href="http://pisheyar.com" target="_blank" className={classes.footerLinksboxLink}>
+                                پیشه یار
+                            </a>
                         </div>
                     </div>
                 </div>

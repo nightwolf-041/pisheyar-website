@@ -38,7 +38,7 @@ function BottomSlider(props) {
         // initialSlide: 1,
         slidesPerView: 3,
         spaceBetween: 35,
-        // rebuildOnUpdate: true,
+        rebuildOnUpdate: true,
         // navigation: {
         //     nextEl: '.swiper-bottomSlider-next',
         //     prevEl: '.swiper-bottomSlider-prev'

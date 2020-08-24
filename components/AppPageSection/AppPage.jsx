@@ -78,6 +78,7 @@ const AppPageSection = () => {
                         <a href={currentIndex === 0 ?
                         "https://play.google.com/store/apps/details?id=com.pisheplus_contractor" :
                         "https://play.google.com/store/apps/details?id=com.pisheyarplus_client"}
+                        target="_blank"
                         className={classes.appPageRightSocialImageLink}>
                             <img src="/GooglePlay.png" alt=""
                             className={classes.appPageRightSocialImage} />

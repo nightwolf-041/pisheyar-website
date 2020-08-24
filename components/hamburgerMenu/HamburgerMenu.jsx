@@ -13,7 +13,9 @@ const HamburgerMenu = (props) => {
                 <div className={classes.test}>
 
                 <div className={classes.hamburgerMenuRegisterItemDiv}>
-                    <FontAwesomeIcon icon={faSignInAlt} className={classes.hamburgerMenuRegisterItem} />
+                    <a href="http://panel.pisheplus.com" target="_blank">
+                        <FontAwesomeIcon icon={faSignInAlt} className={classes.hamburgerMenuRegisterItem} />
+                    </a>
                 </div>
 
                 <Link activeClass={classes.hamburgerMenuItemLinkActive} to="topPage" spy={true}

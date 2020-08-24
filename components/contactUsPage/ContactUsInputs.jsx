@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Select from 'react-select';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import classes from './contactUsPage.module.scss'
 
 const ContactUsInputs = () => {
@@ -209,15 +209,6 @@ const ContactUsInputs = () => {
                 ارسال
             </button>
         </div>
-
-        <ToastContainer
-        autoClose={4000}
-        position={toast.POSITION.BOTTOM_CENTER}
-        hideProgressBar={false}
-        closeOnClick={true}
-        pauseOnVisibilityChange={false}
-        pauseOnHover={false}
-        rtl/>
         </>
     )
 }

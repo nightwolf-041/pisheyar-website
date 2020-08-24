@@ -328,6 +328,7 @@ class MenuPageSearch extends Component {
                 <OrderCreateModal
                 hidden={this.state.orderCreateModalHidden}
                 orderCreateModalLabel={this.state.resultCategoryLabel}
+                orderCreateModalGuid={this.state.resultCategoryGuid}
                 hideOrderCreateModal={this.hideOrderCreateModal}
                 />
             </>
